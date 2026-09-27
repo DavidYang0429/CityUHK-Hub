@@ -45,6 +45,14 @@ function toDate(value, fallback) {
 }
 
 /**
+ * 完整 ISO 时间。updatedAt 要按「几小时前」显示，截到日期会白丢最多一天，
+ * 新项目一上线就显示成「昨天」。离线兜底的 fileDate 本身只有日期，保持原样即可。
+ */
+function toIso(value, fallback) {
+  return typeof value === 'string' && value.length >= 10 ? value : fallback;
+}
+
+/**
  * 读取上次产物的 addedAt 沿承下来。被本站收录的日期 GitHub 上没有，
  * 只能自己记，否则每天重建都会把老项目算成今天新增；首次构建读不到就返回空表。
  */
@@ -135,7 +143,7 @@ async function buildProject(meta, content, fileName, github, useOffline, fileDat
     language: githubMeta?.language ?? '',
     license: githubMeta?.license ?? '',
     createdAt: toDate(githubMeta?.createdAt, fileDate),
-    updatedAt: toDate(githubMeta?.pushedAt, fileDate),
+    updatedAt: toIso(githubMeta?.pushedAt, fileDate),
     /** 被本站收录的日期；GitHub 上没有这个概念，靠上一次的产物沿承 */
     addedAt: resolveAddedAt(id),
     status: meta.status,
