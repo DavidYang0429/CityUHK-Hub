@@ -78,6 +78,9 @@ export const ProjectCard = memo(function ProjectCard({
             DEMO
           </span>
         )}
+        {project.hasRelease && (
+          <span className="pixel seal-release shrink-0 px-1.5 py-1 text-[7px]">RELEASE</span>
+        )}
         <HeatFlames level={heat.level} className="ml-auto shrink-0 text-[10px]" />
         <span className="pixel shrink-0 text-[10px] text-muted">
           [{String(index + 1).padStart(2, '0')}]

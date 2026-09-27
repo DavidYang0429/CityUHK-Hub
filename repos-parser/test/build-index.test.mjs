@@ -52,6 +52,8 @@ test('buildIndex 把项目 Markdown 构建成前端直接可读的静态 JSON', 
     assert.equal(project.repo, 'demo-owner/demo-project');
     assert.equal(project.githubUrl, 'https://github.com/demo-owner/demo-project');
     assert.equal(project.demoUrl, null);
+    // 离线构建拿不到 Release 信息，降级为 false
+    assert.equal(project.hasRelease, false);
     assert.equal(project.language, '');
     assert.equal(project.stars, 0);
     // 离线构建拿不到 GitHub 时间戳，回退到文档自身的修改时间
@@ -140,6 +142,7 @@ test('buildIndex 不补齐 Features：留空或不写都不展示，也不使用
           defaultBranch: 'main',
         }),
         fetchReadme: async () => '# Remote Project\n\n来自 GitHub README 的项目介绍。',
+        fetchHasRelease: async () => false,
       },
     });
 
@@ -186,6 +189,7 @@ test('buildIndex 用自建 star 快照算近 7 天涨星，历史不足时留空
   const githubClient = {
     fetchRepoMeta: async () => ({ repo: 'demo-project', owner: 'demo-owner', stars: 28, forks: 3 }),
     fetchReadme: async () => '',
+    fetchHasRelease: async () => false,
   };
   const today = new Date().toISOString().slice(0, 10);
   const writeHistory = (daysAgo, stars) =>
@@ -209,6 +213,62 @@ test('buildIndex 用自建 star 快照算近 7 天涨星，历史不足时留空
   } finally {
     if (previousPath === undefined) delete process.env.STAR_HISTORY_PATH;
     else process.env.STAR_HISTORY_PATH = previousPath;
+    await fs.rm(root, { recursive: true, force: true });
+  }
+});
+
+test('buildIndex 采集 Release 标记，取不到时降级为 false', async () => {
+  const root = await fs.mkdtemp(path.join(os.tmpdir(), 'cityu-hub-release-'));
+  const inputDir = path.join(root, 'repos');
+  const outputDir = path.join(root, 'output');
+  await fs.mkdir(inputDir);
+  await fs.writeFile(
+    path.join(inputDir, 'demo.md'),
+    [
+      '---',
+      'id: demo-project',
+      'title: Demo Project',
+      'author: demo-owner',
+      'authorName: Demo Owner',
+      'major: Computer Science',
+      'enrollmentYear: 2024',
+      'repoUrl: https://github.com/demo-owner/demo-project',
+      'category: web',
+      'featured: false',
+      '---',
+      '',
+      '演示用的项目介绍。',
+    ].join('\n'),
+    'utf8',
+  );
+
+  const meta = async () => ({ repo: 'demo-project', owner: 'demo-owner' });
+  try {
+    const withRelease = await buildIndex({
+      inputDir,
+      outputPath: outputDir,
+      githubClient: {
+        fetchRepoMeta: meta,
+        fetchReadme: async () => '',
+        fetchHasRelease: async () => true,
+      },
+    });
+    assert.equal(withRelease.projects[0].hasRelease, true);
+
+    // 采集失败（限流 / 网络问题）不阻断构建，按没有 Release 处理
+    const failed = await buildIndex({
+      inputDir,
+      outputPath: outputDir,
+      githubClient: {
+        fetchRepoMeta: meta,
+        fetchReadme: async () => '',
+        fetchHasRelease: async () => {
+          throw new Error('rate limited');
+        },
+      },
+    });
+    assert.equal(failed.projects[0].hasRelease, false);
+  } finally {
     await fs.rm(root, { recursive: true, force: true });
   }
 });

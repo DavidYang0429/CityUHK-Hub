@@ -237,6 +237,32 @@ body::after {
   box-shadow: 4px 4px 0 var(--c-shadow), 0 0 24px var(--glow-accent);
 }
 
+/* RELEASE 印章：沿用 DEMO 的流动边框做法，换成绿色，再叠一层呼吸辉光做闪烁；
+   循环处回到起始绿所以不跳变 */
+@keyframes seal-glow {
+  0%,
+  100% {
+    box-shadow: 0 0 8px rgba(34, 197, 94, 0.45);
+  }
+  50% {
+    box-shadow: 0 0 18px rgba(34, 197, 94, 0.95);
+  }
+}
+
+.seal-release {
+  display: inline-flex;
+  align-items: center;
+  border: 2px solid transparent;
+  color: #22c55e;
+  background-image: linear-gradient(var(--c-surface), var(--c-surface)),
+    linear-gradient(90deg, #15803d, #4ade80, #bbf7d0, #4ade80, #15803d);
+  background-origin: border-box;
+  background-clip: padding-box, border-box;
+  background-size: 100% 100%, 200% 100%;
+  background-repeat: no-repeat, repeat-x;
+  animation: border-flow 2.4s linear infinite, seal-glow 1.6s ease-in-out infinite;
+}
+
 .chip-brutal {
   display: inline-flex;
   align-items: center;

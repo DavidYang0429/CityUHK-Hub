@@ -127,6 +127,9 @@ export function ProjectDetailPage() {
                 >
                   {project.repo}
                 </Link>
+                {project.hasRelease && (
+                  <span className="pixel seal-release px-2 py-1 text-[8px]">RELEASE</span>
+                )}
                 <span className="pixel ml-auto border-2 border-accent px-2 py-1 text-[8px] text-accent">
                   SRC
                 </span>

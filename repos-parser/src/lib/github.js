@@ -99,6 +99,17 @@ export function createGithubClient(config, { fetchImpl = globalThis.fetch } = {}
       };
     },
 
+    /** 有没有发布过 Release：只取 1 条列表判断，命中即算有 */
+    async fetchHasRelease(ref) {
+      // ponytail: 每个仓库多一次请求；只在构建期执行，成本可接受
+      const url = `https://api.github.com/repos/${ref.owner}/${ref.repo}/releases?per_page=1`;
+      const response = await request(url);
+      // 限流 / 404 都按「没有 Release」降级，不阻断构建
+      if (!response.ok) return false;
+      const data = await response.json();
+      return Array.isArray(data) && data.length > 0;
+    },
+
     async fetchReadme(ref) {
       const url = `https://api.github.com/repos/${ref.owner}/${ref.repo}/readme`;
       const response = await request(url);
