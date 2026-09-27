@@ -1,12 +1,12 @@
 name: Sync main
 
-# main 每次推送后刷新 README 贡献者名单，并把 main 合并进 feature；每周一凌晨再定时刷一次
-# （贡献者的提交数会涨，名单要跟着更新）。
+# main 每次推送后刷新 README 贡献者名单，并把 main 合并进 feature；每天凌晨再定时刷一次
+# （GitHub 的 contributors 接口有缓存延迟，新贡献者要过一阵才计入，靠定时任务兜底）。
 on:
   push:
     branches: [main]
   schedule:
-    - cron: '0 20 * * 0' # 周一 04:00（北京时间）
+    - cron: '0 20 * * *' # 每天 04:00（北京时间）
   workflow_dispatch:
 
 permissions:
