@@ -10,6 +10,7 @@ tags:
   - msc-cs
   - mentors
   - phd
+  - llm
   - master
   - cv
   - match
