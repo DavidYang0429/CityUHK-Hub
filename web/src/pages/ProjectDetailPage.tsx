@@ -1,6 +1,6 @@
 import { useEffect, useState } from 'react';
 import { Link, useNavigate, useParams } from 'react-router-dom';
-import { ArrowLeft, Calendar, Clock, ExternalLink, Eye, GitFork, Scale, Star } from 'lucide-react';
+import { ArrowLeft, Calendar, Clock, ExternalLink, Eye, GitFork, Scale, Star, Tag } from 'lucide-react';
 import { fetchStats, trackProjectEvent, type SiteStats } from '../api/stats';
 import { BadgeSnippet } from '../components/BadgeSnippet';
 import { EmptyState } from '../components/EmptyState';
@@ -127,9 +127,6 @@ export function ProjectDetailPage() {
                 >
                   {project.repo}
                 </Link>
-                {project.hasRelease && (
-                  <span className="pixel seal-release px-2 py-1 text-[8px]">RELEASE</span>
-                )}
                 <span className="pixel ml-auto border-2 border-accent px-2 py-1 text-[8px] text-accent">
                   SRC
                 </span>
@@ -196,6 +193,17 @@ export function ProjectDetailPage() {
                   >
                     <ExternalLink className="size-4" />
                     DEMO
+                  </a>
+                )}
+                {project.hasRelease && (
+                  <a
+                    href={`${project.githubUrl}/releases`}
+                    target="_blank"
+                    rel="noreferrer noopener"
+                    className="btn-brutal btn-brutal-release"
+                  >
+                    <Tag className="size-4" />
+                    RELEASE
                   </a>
                 )}
               </div>

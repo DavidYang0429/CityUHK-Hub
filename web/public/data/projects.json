@@ -1,6 +1,6 @@
 {
-  "generatedAt": "2026-09-27T19:01:53.073Z",
-  "total": 6,
+  "generatedAt": "2026-09-27T19:18:53.181Z",
+  "total": 7,
   "projects": [
     {
       "id": "famalhaut04-canvas-weekly-hub",
@@ -192,19 +192,56 @@
       "createdAt": "2026-09-27",
       "updatedAt": "2026-09-27",
       "addedAt": "2026-09-27"
+    },
+    {
+      "id": "quentin040507-multi-llm-router",
+      "name": "三模型路由系统",
+      "author": "Quentin040507",
+      "authorName": "刘全",
+      "major": "Data Science",
+      "enrollmentYear": 2026,
+      "authorAvatar": "",
+      "repo": "Quentin040507/multi-llm-router",
+      "about": "",
+      "description": "多模型协作的 LLM 智能路由原型：自动路由、圆桌会诊、举手表决，一个入口用多个模型",
+      "tags": [
+        "llm",
+        "ai",
+        "python",
+        "fastapi",
+        "deepseek",
+        "qwen",
+        "kimi"
+      ],
+      "category": "AI 工具",
+      "githubUrl": "https://github.com/Quentin040507/multi-llm-router",
+      "demoUrl": null,
+      "hasRelease": false,
+      "stars": 0,
+      "starsGained7d": null,
+      "forks": 0,
+      "language": "",
+      "license": "",
+      "createdAt": "2026-09-27",
+      "updatedAt": "2026-09-27",
+      "addedAt": "2026-09-27"
     }
   ],
   "tags": [
+    {
+      "name": "python",
+      "count": 3
+    },
     {
       "name": "automation",
       "count": 2
     },
     {
-      "name": "msc-cs",
+      "name": "llm",
       "count": 2
     },
     {
-      "name": "python",
+      "name": "msc-cs",
       "count": 2
     },
     {
@@ -213,6 +250,10 @@
     },
     {
       "name": "agent-skills",
+      "count": 1
+    },
+    {
+      "name": "ai",
       "count": 1
     },
     {
@@ -252,7 +293,15 @@
       "count": 1
     },
     {
+      "name": "deepseek",
+      "count": 1
+    },
+    {
       "name": "education",
+      "count": 1
+    },
+    {
+      "name": "fastapi",
       "count": 1
     },
     {
@@ -268,7 +317,7 @@
       "count": 1
     },
     {
-      "name": "llm",
+      "name": "kimi",
       "count": 1
     },
     {
@@ -297,6 +346,10 @@
     },
     {
       "name": "qrcode",
+      "count": 1
+    },
+    {
+      "name": "qwen",
       "count": 1
     },
     {
@@ -338,6 +391,10 @@
       "count": 1
     },
     {
+      "name": "Quentin040507",
+      "count": 1
+    },
+    {
       "name": "RoyNiu06",
       "count": 1
     },
@@ -357,6 +414,10 @@
     },
     {
       "name": "生活工具",
+      "count": 1
+    },
+    {
+      "name": "AI 工具",
       "count": 1
     }
   ]

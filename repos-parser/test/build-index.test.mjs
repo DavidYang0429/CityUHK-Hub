@@ -242,7 +242,11 @@ test('buildIndex 采集 Release 标记，取不到时降级为 false', async () 
     'utf8',
   );
 
-  const meta = async () => ({ repo: 'demo-project', owner: 'demo-owner' });
+  const meta = async () => ({
+    repo: 'demo-project',
+    owner: 'demo-owner',
+    pushedAt: '2026-09-27T10:20:30Z',
+  });
   try {
     const withRelease = await buildIndex({
       inputDir,
@@ -254,6 +258,8 @@ test('buildIndex 采集 Release 标记，取不到时降级为 false', async () 
       },
     });
     assert.equal(withRelease.projects[0].hasRelease, true);
+    // 最近更新要保留完整时分秒，截到日期会让新项目显示成「昨天」
+    assert.equal(withRelease.projects[0].updatedAt, '2026-09-27T10:20:30Z');
 
     // 采集失败（限流 / 网络问题）不阻断构建，按没有 Release 处理
     const failed = await buildIndex({

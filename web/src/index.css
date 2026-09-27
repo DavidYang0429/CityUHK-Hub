@@ -237,6 +237,27 @@ body::after {
   box-shadow: 4px 4px 0 var(--c-shadow), 0 0 24px var(--glow-accent);
 }
 
+/* RELEASE 按钮：同 DEMO 的流动边框，换成绿色，指向仓库的 Releases 页 */
+.btn-brutal-release {
+  border: 3px solid transparent;
+  color: var(--c-ink);
+  background-image: linear-gradient(var(--c-surface), var(--c-surface)),
+    linear-gradient(90deg, #15803d, #4ade80, #bbf7d0, #4ade80, #15803d);
+  background-origin: border-box;
+  background-clip: padding-box, border-box;
+  background-size: 100% 100%, 200% 100%;
+  background-repeat: no-repeat, repeat-x;
+  animation: border-flow 3s linear infinite;
+}
+
+.btn-brutal-release:hover {
+  border-color: transparent;
+  background-image: linear-gradient(var(--c-canvas), var(--c-canvas)),
+    linear-gradient(90deg, #15803d, #4ade80, #bbf7d0, #4ade80, #15803d);
+  color: #16a34a;
+  box-shadow: 4px 4px 0 var(--c-shadow), 0 0 24px rgba(34, 197, 94, 0.6);
+}
+
 /* RELEASE 印章：沿用 DEMO 的流动边框做法，换成绿色，再叠一层呼吸辉光做闪烁；
    循环处回到起始绿所以不跳变 */
 @keyframes seal-glow {

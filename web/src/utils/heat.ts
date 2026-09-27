@@ -62,9 +62,9 @@ export interface HeatInput {
 }
 
 export function computeHeat(input: HeatInput, now = Date.now()): HeatResult {
-  const days = input.updatedAt
-    ? Math.max(0, (now - new Date(`${input.updatedAt}T00:00:00Z`).getTime()) / 86_400_000)
-    : 999;
+  // updatedAt 可能是完整 ISO（联网构建）或纯日期（离线兜底），new Date 两种都能解析
+  const updatedAt = input.updatedAt ? new Date(input.updatedAt).getTime() : NaN;
+  const days = Number.isNaN(updatedAt) ? 999 : Math.max(0, (now - updatedAt) / 86_400_000);
 
   const dimensions: HeatDimensions = {
     stars: starsRatio(input.stars),
