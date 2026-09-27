@@ -258,6 +258,31 @@ body::after {
   box-shadow: 4px 4px 0 var(--c-shadow), 0 0 24px rgba(34, 197, 94, 0.6);
 }
 
+/* DEMO 印章：紫色流动边框 + 呼吸辉光，和 RELEASE 印章同一套做法 */
+@keyframes seal-demo-glow {
+  0%,
+  100% {
+    box-shadow: 0 0 8px rgba(168, 85, 247, 0.45);
+  }
+  50% {
+    box-shadow: 0 0 18px rgba(168, 85, 247, 0.95);
+  }
+}
+
+.seal-demo {
+  display: inline-flex;
+  align-items: center;
+  border: 2px solid transparent;
+  color: #a855f7;
+  background-image: linear-gradient(var(--c-surface), var(--c-surface)),
+    linear-gradient(90deg, #7c3aed, #c084fc, #d8b4fe, #c084fc, #7c3aed);
+  background-origin: border-box;
+  background-clip: padding-box, border-box;
+  background-size: 100% 100%, 200% 100%;
+  background-repeat: no-repeat, repeat-x;
+  animation: border-flow 2.4s linear infinite, seal-demo-glow 1.6s ease-in-out infinite;
+}
+
 /* RELEASE 印章：沿用 DEMO 的流动边框做法，换成绿色，再叠一层呼吸辉光做闪烁；
    循环处回到起始绿所以不跳变 */
 @keyframes seal-glow {

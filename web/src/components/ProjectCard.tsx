@@ -74,9 +74,7 @@ export const ProjectCard = memo(function ProjectCard({
           })()}
         </span>
         {project.demoUrl && (
-          <span className="pixel shrink-0 border-2 border-accent px-1.5 py-1 text-[7px] text-accent">
-            DEMO
-          </span>
+          <span className="pixel seal-demo shrink-0 px-1.5 py-1 text-[7px]">DEMO</span>
         )}
         {project.hasRelease && (
           <span className="pixel seal-release shrink-0 px-1.5 py-1 text-[7px]">RELEASE</span>
