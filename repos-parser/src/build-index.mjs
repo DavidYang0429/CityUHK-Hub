@@ -78,6 +78,16 @@ async function buildProject(meta, content, fileName, github, useOffline, fileDat
     }
   }
 
+  // 有没有发布过 Release，用来在卡片和详情页盖绿色印章；失败降级为 false
+  let hasRelease = false;
+  if (!useOffline) {
+    try {
+      hasRelease = await github.fetchHasRelease(ref);
+    } catch (error) {
+      console.warn(`[build-index] ${fileName}: 获取 Release 信息失败，按无 Release 处理 —— ${error.message}`);
+    }
+  }
+
   const featuresHeading = content.match(/^\s{0,3}##\s+Features\s*#*\s*$/im);
   const intro = featuresHeading ? content.slice(0, featuresHeading.index) : content;
   let fetchedReadme = '';
@@ -118,6 +128,7 @@ async function buildProject(meta, content, fileName, github, useOffline, fileDat
     category: meta.category,
     githubUrl: ref.repoUrl,
     demoUrl: meta.homepageUrl || githubMeta?.homepageUrl || null,
+    hasRelease,
     stars: githubMeta?.stars ?? 0,
     starsGained7d: resolveStarsGained7d(`${ref.owner}/${ref.repo}`, githubMeta?.stars ?? null),
     forks: githubMeta?.forks ?? 0,

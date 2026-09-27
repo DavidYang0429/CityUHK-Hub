@@ -1,13 +1,13 @@
 {
-  "generatedAt": "2026-09-23T18:53:11.785Z",
-  "total": 4,
+  "generatedAt": "2026-09-27T19:01:53.073Z",
+  "total": 6,
   "projects": [
     {
       "id": "famalhaut04-canvas-weekly-hub",
       "name": "Canvas Weekly Hub（城大 Canvas 课程助手）",
       "author": "Famalhaut04",
       "authorName": "Fomal",
-      "major": "Computer Science",
+      "major": "Cybersecurity",
       "enrollmentYear": 2026,
       "authorAvatar": "",
       "repo": "Famalhaut04/canvas-weekly-hub",
@@ -24,20 +24,21 @@
       "category": "学习辅助",
       "githubUrl": "https://github.com/Famalhaut04/canvas-weekly-hub",
       "demoUrl": "https://famalhaut04.github.io/canvas-weekly-hub/web/",
+      "hasRelease": false,
       "stars": 0,
-      "starsGained7d": 0,
+      "starsGained7d": null,
       "forks": 0,
       "language": "",
       "license": "",
-      "createdAt": "2026-09-23",
-      "updatedAt": "2026-09-23",
+      "createdAt": "2026-09-24",
+      "updatedAt": "2026-09-24",
       "addedAt": "2026-09-23"
     },
     {
       "id": "inscripoem-cityu-beamer",
       "name": "cityu-beamer",
-      "author": "Brandon",
-      "authorName": "cxb",
+      "author": "CHANG Xuben",
+      "authorName": "Brandon",
       "major": "Computer Science",
       "enrollmentYear": 2026,
       "authorAvatar": "",
@@ -50,13 +51,14 @@
       "category": "学习辅助",
       "githubUrl": "https://github.com/inscripoem/cityu-beamer",
       "demoUrl": null,
+      "hasRelease": false,
       "stars": 0,
-      "starsGained7d": 0,
+      "starsGained7d": null,
       "forks": 0,
       "language": "",
       "license": "",
-      "createdAt": "2026-09-23",
-      "updatedAt": "2026-09-23",
+      "createdAt": "2026-09-24",
+      "updatedAt": "2026-09-24",
       "addedAt": "2026-09-23"
     },
     {
@@ -78,14 +80,45 @@
       "category": "学习辅助",
       "githubUrl": "https://github.com/null1024-ws/CityU-CS-Guide",
       "demoUrl": "https://null1024-ws.github.io/CityU-CS-Guide/",
+      "hasRelease": false,
       "stars": 0,
-      "starsGained7d": 0,
+      "starsGained7d": null,
       "forks": 0,
       "language": "",
       "license": "",
       "createdAt": "2026-09-22",
       "updatedAt": "2026-09-22",
       "addedAt": "2026-09-23"
+    },
+    {
+      "id": "royniu06-qrcode4food",
+      "name": "QRcode4food — 城大周边点餐导航",
+      "author": "RoyNiu06",
+      "authorName": "NIU ZIRU",
+      "major": "Data Science",
+      "enrollmentYear": 2024,
+      "authorAvatar": "",
+      "repo": "RoyNiu06/QRcode4food",
+      "about": "",
+      "description": "QRcode4food 是面向香港城市大学及周边餐厅的手机点餐入口目录。打开网页即可查找餐厅及其不同窗口的二维码，点击对应入口跳转到商家的点餐网页，无需在本站注册或登录。",
+      "tags": [
+        "cityuhk",
+        "food",
+        "qrcode",
+        "canteen"
+      ],
+      "category": "生活工具",
+      "githubUrl": "https://github.com/RoyNiu06/QRcode4food",
+      "demoUrl": "https://qrcode.royilab.com/",
+      "hasRelease": false,
+      "stars": 0,
+      "starsGained7d": null,
+      "forks": 0,
+      "language": "",
+      "license": "",
+      "createdAt": "2026-09-24",
+      "updatedAt": "2026-09-24",
+      "addedAt": "2026-09-27"
     },
     {
       "id": "l01nki1-extend-slides",
@@ -114,17 +147,66 @@
       "category": "学习辅助",
       "githubUrl": "https://github.com/L01nki1/extend-slides",
       "demoUrl": null,
+      "hasRelease": false,
       "stars": 0,
-      "starsGained7d": 0,
+      "starsGained7d": null,
       "forks": 0,
       "language": "",
       "license": "",
       "createdAt": "2026-09-22",
       "updatedAt": "2026-09-22",
       "addedAt": "2026-09-23"
+    },
+    {
+      "id": "warpshlczy-mentors-auto-match",
+      "name": "MentorMatch · 导师匹配助手",
+      "author": "Warpshlczy",
+      "authorName": "Mokie·正一",
+      "major": "Computer Science",
+      "enrollmentYear": 2026,
+      "authorAvatar": "",
+      "repo": "Warpshlczy/mentors-auto-match",
+      "about": "",
+      "description": "🏹 保研申博？一键迅速拿捏目标导师 MentorMatch 是给同学选导师用的桌面应用：把简历或 research plan 丢进去，选硕士还是博士，它会从 CSRankings 捞一批候选导师逐个算匹配度，最后按分数排好，告诉你该先给谁发邮件。",
+      "tags": [
+        "msc-cs",
+        "mentors",
+        "phd",
+        "llm",
+        "master",
+        "cv",
+        "match",
+        "python",
+        "thesis",
+        "automation"
+      ],
+      "category": "科研工具",
+      "githubUrl": "https://github.com/Warpshlczy/mentors-auto-match",
+      "demoUrl": null,
+      "hasRelease": false,
+      "stars": 0,
+      "starsGained7d": null,
+      "forks": 0,
+      "language": "",
+      "license": "",
+      "createdAt": "2026-09-27",
+      "updatedAt": "2026-09-27",
+      "addedAt": "2026-09-27"
     }
   ],
   "tags": [
+    {
+      "name": "automation",
+      "count": 2
+    },
+    {
+      "name": "msc-cs",
+      "count": 2
+    },
+    {
+      "name": "python",
+      "count": 2
+    },
     {
       "name": "slides",
       "count": 2
@@ -138,15 +220,19 @@
       "count": 1
     },
     {
-      "name": "automation",
-      "count": 1
-    },
-    {
       "name": "calendar",
       "count": 1
     },
     {
+      "name": "canteen",
+      "count": 1
+    },
+    {
       "name": "canvas",
+      "count": 1
+    },
+    {
+      "name": "cityuhk",
       "count": 1
     },
     {
@@ -162,7 +248,15 @@
       "count": 1
     },
     {
+      "name": "cv",
+      "count": 1
+    },
+    {
       "name": "education",
+      "count": 1
+    },
+    {
+      "name": "food",
       "count": 1
     },
     {
@@ -174,7 +268,19 @@
       "count": 1
     },
     {
-      "name": "msc-cs",
+      "name": "llm",
+      "count": 1
+    },
+    {
+      "name": "master",
+      "count": 1
+    },
+    {
+      "name": "match",
+      "count": 1
+    },
+    {
+      "name": "mentors",
       "count": 1
     },
     {
@@ -182,11 +288,15 @@
       "count": 1
     },
     {
+      "name": "phd",
+      "count": 1
+    },
+    {
       "name": "pptx",
       "count": 1
     },
     {
-      "name": "python",
+      "name": "qrcode",
       "count": 1
     },
     {
@@ -204,6 +314,10 @@
     {
       "name": "study-notes",
       "count": 1
+    },
+    {
+      "name": "thesis",
+      "count": 1
     }
   ],
   "authors": [
@@ -212,7 +326,7 @@
       "count": 1
     },
     {
-      "name": "Brandon",
+      "name": "CHANG Xuben",
       "count": 1
     },
     {
@@ -222,12 +336,28 @@
     {
       "name": "lowen",
       "count": 1
+    },
+    {
+      "name": "RoyNiu06",
+      "count": 1
+    },
+    {
+      "name": "Warpshlczy",
+      "count": 1
     }
   ],
   "categories": [
     {
       "name": "学习辅助",
       "count": 4
+    },
+    {
+      "name": "科研工具",
+      "count": 1
+    },
+    {
+      "name": "生活工具",
+      "count": 1
     }
   ]
 }

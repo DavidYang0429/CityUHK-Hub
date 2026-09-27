@@ -18,6 +18,8 @@ export interface Project {
   category: string;
   githubUrl: string;
   demoUrl: string | null;
+  // 仓库是否发布过 Release；构建期采集，拿不到时降级为 false
+  hasRelease?: boolean;
   stars: number;
   // 近 7 天新增 star，取自自建快照；null 表示站内历史还没攒够 7 天
   starsGained7d?: number | null;
