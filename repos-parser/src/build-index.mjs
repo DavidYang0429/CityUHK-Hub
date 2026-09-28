@@ -5,7 +5,7 @@ import { marked } from 'marked';
 import { aggregateProjects } from './lib/aggregate.js';
 import { createGithubClient, parseRepoUrl } from './lib/github.js';
 import { analyzeReadme, fillProjectContent, guessTagsFromReadme } from './lib/markdown.js';
-import { slugify } from './lib/slug.js';
+import { canonicalRepoUrl, deriveProjectId } from './lib/project-id.js';
 import { loadConfig } from './config.js';
 import { parseFrontmatterDocument } from './lib/frontmatter.js';
 
@@ -33,10 +33,6 @@ function scrubHtml(html) {
 /** Markdown → HTML，详情页直接渲染，前端无需再引 markdown 依赖 */
 export function renderReadmeHtml(markdown) {
   return scrubHtml(String(marked.parse(markdown ?? '')));
-}
-
-function canonicalRepoUrl(url) {
-  return url.toLowerCase().replace(/\/+$/, '').replace(/\.git$/, '');
 }
 
 /** GitHub 的 ISO 时间戳只保留日期部分，产物更易读 */
@@ -78,7 +74,7 @@ async function buildProject(meta, content, fileName, github, useOffline, fileDat
   ].slice(0, 12);
 
   return {
-    id: meta.id || slugify(`${ref.owner}-${ref.repo}`),
+    id: deriveProjectId(meta),
     name: meta.title || analysis.title || githubMeta?.repo || ref.repo,
     author: meta.author || githubMeta?.owner || ref.owner,
     authorName: meta.authorName,
