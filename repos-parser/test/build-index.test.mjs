@@ -130,3 +130,51 @@ test('buildIndex 在介绍和 Features 为空时回退到 GitHub README 与仓�
     await fs.rm(root, { recursive: true, force: true });
   }
 });
+
+test('buildIndex 联网构建时单个仓库请求失败会回退到离线数据而不是中断', async () => {
+  const root = await fs.mkdtemp(path.join(os.tmpdir(), 'cityu-hub-failing-'));
+  const inputDir = path.join(root, 'repos');
+  const outputDir = path.join(root, 'output');
+  await fs.mkdir(inputDir);
+  const doc = (name) =>
+    [
+      '---',
+      `title: ${name}`,
+      'author: demo-owner',
+      'authorName: Demo Owner',
+      'major: Computer Science',
+      'enrollmentYear: 2024',
+      `repoUrl: https://github.com/demo-owner/${name}`,
+      '---',
+      '',
+      `${name} 是一个用于验证构建回退行为的示例项目，介绍文字足够长。`,
+    ].join('\n');
+  await fs.writeFile(path.join(inputDir, 'a.md'), doc('alpha'), 'utf8');
+  await fs.writeFile(path.join(inputDir, 'b.md'), doc('beta'), 'utf8');
+
+  const warn = console.warn;
+  const warnings = [];
+  console.warn = (message) => warnings.push(message);
+  try {
+    const result = await buildIndex({
+      inputDir,
+      outputPath: outputDir,
+      githubClient: {
+        fetchRepoMeta: async (ref) => {
+          if (ref.repo === 'alpha') throw new Error('GitHub 上找不到仓库 demo-owner/alpha');
+          return { repo: ref.repo, owner: ref.owner, stars: 7, language: 'Python' };
+        },
+        fetchReadme: async () => '',
+      },
+    });
+    assert.deepEqual(
+      result.projects.map((project) => [project.id, project.stars]),
+      [['demo-owner-alpha', 0], ['demo-owner-beta', 7]],
+    );
+    assert.equal(warnings.length, 1);
+    assert.match(warnings[0], /a\.md.*已回退到离线数据/);
+  } finally {
+    console.warn = warn;
+    await fs.rm(root, { recursive: true, force: true });
+  }
+});

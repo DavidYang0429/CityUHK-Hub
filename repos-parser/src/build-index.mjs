@@ -3,6 +3,7 @@ import path from 'node:path';
 import { fileURLToPath } from 'node:url';
 import { marked } from 'marked';
 import { aggregateProjects } from './lib/aggregate.js';
+import { mapLimit } from './lib/concurrency.js';
 import { createGithubClient, parseRepoUrl } from './lib/github.js';
 import { analyzeReadme, fillProjectContent, guessTagsFromReadme } from './lib/markdown.js';
 import { canonicalRepoUrl, deriveProjectId } from './lib/project-id.js';
@@ -15,6 +16,18 @@ const reposDir = path.resolve(process.env.REPOS_DIR ?? path.join(projectRoot, 'r
 /** 直接产出到 web 的静态资源目录，前端 npm run build 时会一起打包 */
 const outputDir = path.resolve(process.env.OUTPUT_DIR ?? path.join(projectRoot, 'web', 'public', 'data'));
 const offline = process.argv.includes('--offline');
+/** 联网构建时同时请求 GitHub 的仓库数 */
+const GITHUB_CONCURRENCY = 4;
+
+/** GitHub 请求失败不应让整站构建失败：告警后按离线数据继续 */
+async function tryGithub(fileName, request, fallback) {
+  try {
+    return await request();
+  } catch (error) {
+    console.warn(`[build-index] ${fileName}: ${error.message}，已回退到离线数据`);
+    return fallback;
+  }
+}
 
 async function writeJson(file, value) {
   await fs.mkdir(path.dirname(file), { recursive: true });
@@ -49,7 +62,7 @@ async function buildProject(meta, content, fileName, github, useOffline, fileDat
   if (!ref) throw new Error(`${fileName}: repoUrl 不是可识别的 GitHub 仓库地址`);
 
   let githubMeta = null;
-  if (!useOffline) githubMeta = await github.fetchRepoMeta(ref);
+  if (!useOffline) githubMeta = await tryGithub(fileName, () => github.fetchRepoMeta(ref), null);
 
   const featuresHeading = content.match(/^\s{0,3}##\s+Features\s*#*\s*$/im);
   const intro = featuresHeading ? content.slice(0, featuresHeading.index) : content;
@@ -58,7 +71,8 @@ async function buildProject(meta, content, fileName, github, useOffline, fileDat
     : '';
   const needsReadme = !intro.trim();
   const needsDescription = Boolean(featuresHeading && !featureBody.trim());
-  const fetchedReadme = needsReadme && !useOffline ? await github.fetchReadme(ref) : '';
+  const fetchedReadme =
+    needsReadme && !useOffline ? await tryGithub(fileName, () => github.fetchReadme(ref), '') : '';
   const enrichedContent = fillProjectContent(content, {
     readme: fetchedReadme,
     description: needsDescription ? githubMeta?.description : '',
@@ -106,18 +120,19 @@ export async function buildIndex({ inputDir = reposDir, outputPath = outputDir, 
     .sort();
   const config = loadConfig();
   const github = githubClient ?? createGithubClient(config);
-  const projects = [];
-  const ids = new Map();
-  const repoUrls = new Map();
-
-  for (const fileName of files) {
+  const parsed = await mapLimit(files, GITHUB_CONCURRENCY, async (fileName) => {
     const filePath = path.join(inputDir, fileName);
     const source = await fs.readFile(filePath, 'utf8');
     const { meta, body } = parseFrontmatterDocument(source, fileName);
     // 离线构建拿不到 GitHub 的 pushed_at，用文档自身的时间兜底
     const fileDate = (await fs.stat(filePath)).mtime.toISOString().slice(0, 10);
-    const project = await buildProject(meta, body, fileName, github, useOffline, fileDate);
+    return { fileName, project: await buildProject(meta, body, fileName, github, useOffline, fileDate) };
+  });
 
+  const projects = [];
+  const ids = new Map();
+  const repoUrls = new Map();
+  for (const { fileName, project } of parsed) {
     const repoKey = canonicalRepoUrl(project.githubUrl);
     if (ids.has(project.id)) throw new Error(`${fileName}: id 与 ${ids.get(project.id)} 重复`);
     if (repoUrls.has(repoKey)) throw new Error(`${fileName}: repoUrl 与 ${repoUrls.get(repoKey)} 重复`);
