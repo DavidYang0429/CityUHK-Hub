@@ -1,6 +1,6 @@
 {
   "$schema": "https://json-schema.org/draft/2020-12/schema",
-  "$id": "https://cityu-hub.example/schema/repo.schema.json",
+  "$id": "https://cityu-hub.tech/schema/repo.schema.json",
   "title": "CityU-Hub repository metadata",
   "type": "object",
   "additionalProperties": false,
@@ -14,7 +14,12 @@
     "major": { "type": "string", "minLength": 1, "maxLength": 120 },
     "enrollmentYear": { "type": "integer", "minimum": 2000, "maximum": 2100 },
     "repoUrl": { "type": "string", "format": "uri", "pattern": "^https://github\\.com/" },
-    "homepageUrl": { "type": "string", "format": "uri-reference" },
+    "homepageUrl": {
+      "anyOf": [
+        { "const": "" },
+        { "type": "string", "format": "uri", "pattern": "^https?://" }
+      ]
+    },
     "tags": { "type": "array", "maxItems": 12, "items": { "type": "string", "maxLength": 16 } },
     "category": { "type": "string", "maxLength": 80 },
     "featured": { "type": "boolean" },
