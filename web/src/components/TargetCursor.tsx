@@ -71,7 +71,8 @@ export function TargetCursor({
 
     const root = document.documentElement;
     if (hideDefaultCursor) root.classList.add('cursor-hidden');
-    const reducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+    // MediaQueryList.matches 是实时值，读取时用它，用户中途切换系统设置也能生效
+    const reducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)');
 
     // 光标位置与鼠标位置
     let mouseX = window.innerWidth / 2;
@@ -208,7 +209,7 @@ export function TargetCursor({
       posX += (mouseX - posX) * follow;
       posY += (mouseY - posY) * follow;
 
-      if (!activeEl && !reducedMotion) {
+      if (!activeEl && !reducedMotion.matches) {
         rotation = (rotation + (360 / Math.max(0.1, spinDuration)) * dt) % 360;
       }
 
