@@ -76,5 +76,5 @@ jobs:
         run: |
           git fetch origin main feature
           git checkout -B feature origin/feature
-          git merge --no-edit origin/main
+          git merge -X theirs --no-edit origin/main
           git push origin feature
