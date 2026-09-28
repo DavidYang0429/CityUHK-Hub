@@ -88,8 +88,9 @@ export async function enrichProjectsWithGithub(
         metas.set(slug, cached.meta);
         continue;
       }
-      // 语言、stars、头像都齐了就不用再请求
-      if (project.language && project.stars > 0 && project.authorAvatar) continue;
+      // 联网构建的产物一定带头像；有头像说明 stars / 语言已由构建期取到，
+      // 不能靠 stars > 0 判断（0 star 是合法值，否则会反复请求）
+      if (project.authorAvatar) continue;
       if (queue.length >= MAX_REQUESTS || queue.some((item) => item.slug === slug)) continue;
       queue.push({ slug });
     }
@@ -124,10 +125,11 @@ export async function enrichProjectsWithGithub(
       const slug = repoSlug(project);
       const meta = slug ? metas.get(slug) : undefined;
       if (!meta) return project;
-      const language = project.language || meta.language;
-      const stars = meta.stars || project.stars;
-      const forks = meta.forks || project.forks;
-      const authorAvatar = project.authorAvatar || meta.avatar;
+      // GitHub 返回的是最新值，0 star 也要如实展示
+      const language = meta.language;
+      const stars = meta.stars;
+      const forks = meta.forks;
+      const authorAvatar = meta.avatar || project.authorAvatar;
       if (
         language === project.language &&
         stars === project.stars &&
