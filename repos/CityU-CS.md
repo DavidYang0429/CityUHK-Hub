@@ -5,7 +5,7 @@ authorName: Fan Wang
 major: Computer Science
 enrollmentYear: 2022
 repoUrl: https://github.com/mojimoon/CityU-CS
-homepageUrl: 'https://www.mojimoon.top/CityU-CS/
+homepageUrl: https://www.mojimoon.top/CityU-CS/
 tags:
   - bsc-cs
   - notes
