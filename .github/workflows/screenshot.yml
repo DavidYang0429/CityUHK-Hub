@@ -12,9 +12,10 @@ on:
 permissions:
   contents: write
 
-# 与 main-sync 共用一个组：两者都会改写 README，串行跑才不会互相覆盖
+# 单独一组：原先和 main-sync 共用 readme-writer，截图等部署时会把它一起堵住，
+# 连带卡死 main→feature 同步。两边提交前都会 fetch+reset 到最新 main，写 README 的竞争能自愈。
 concurrency:
-  group: readme-writer
+  group: screenshot-writer
   cancel-in-progress: false
 
 jobs:
@@ -46,8 +47,10 @@ jobs:
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
 
       - name: 等待站点部署完成
+        id: wait-deploy
         # 截图抓线上站点，Vercel 收到推送要重新构建才发布，不等就拍到上一版。判据：
         # /data/projects.json 里构建时写入的 generatedAt 晚于本次提交时间，说明已上线。
+        # 等不到就整轮跳过（见下一步的 if），不提交过期截图。
         env:
           DEPLOY_READY_URL: https://cityu-hub.bond/data/projects.json
         run: |
@@ -55,7 +58,7 @@ jobs:
           git fetch -q origin main
           commit_epoch="$(git log -1 --format=%ct origin/main)"
           target=$((commit_epoch - 60))
-          deadline=$(( $(date +%s) + 900 ))
+          deadline=$(( $(date +%s) + 300 ))
 
           while [ "$(date +%s)" -lt "$deadline" ]; do
             generated="$(curl -fsS --max-time 20 "$DEPLOY_READY_URL" 2>/dev/null | node -e 'let s="";process.stdin.on("data",(d)=>s+=d).on("end",()=>{try{process.stdout.write(String(JSON.parse(s).generatedAt??""))}catch{process.stdout.write("")}})' || true)"
@@ -64,6 +67,7 @@ jobs:
               built_epoch="$(node -e 'const t=Date.parse(process.argv[1]);process.stdout.write(Number.isNaN(t)?"0":String(Math.floor(t/1000)))' "$generated" 2>/dev/null || echo 0)"
               if [ "$built_epoch" -ge "$target" ]; then
                 echo "站点已更新到本次提交：generatedAt=${generated}"
+                echo "ready=true" >> "$GITHUB_OUTPUT"
                 exit 0
               fi
               echo "部署尚未完成：generatedAt=${generated}（${built_epoch} < ${target}），15 秒后再查"
@@ -73,9 +77,12 @@ jobs:
             sleep 15
           done
 
-          echo "警告：等待部署超时（15 分钟），按当前线上版本截图" >&2
+          # 线上还是旧版本，拍到的是过期页面，宁可不更新也不写进仓库。
+          echo "等待部署超时（5 分钟），跳过本轮截图" >&2
+          echo "ready=false" >> "$GITHUB_OUTPUT"
 
       - name: 抓取截图并在最新远端基线上提交
+        if: steps.wait-deploy.outputs.ready == 'true'
         env:
           SITE_URL: https://cityu-hub.bond/
         run: |
