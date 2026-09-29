@@ -15,7 +15,7 @@ function ScrollToTop() {
 
 export default function App() {
   return (
-    // 纯静态部署到 GitHub Pages，使用 HashRouter 保证深链接刷新可用
+    // 纯静态部署（Vercel / 自建静态服务），没有服务端路由回退，用 HashRouter 保证深链接刷新可用
     <HashRouter>
       <ScrollToTop />
       {/* 全站目标锁定光标：链接、按钮与卡片都会触发框选 */}

@@ -64,8 +64,7 @@ CityU Hub 是一个面向**香港城市大学（CityU）学生开源项目**的�
 CityU-Hub/
 ├── repos/                      # 项目条目：每个项目一个 Markdown（front matter + 正文）
 │   ├── _template.md            # 提交模板，复制它开始写自己的项目
-│   ├── CityU-Beamer.md
-│   └── extend-slides.md
+│   └── *.md                    # 已收录的项目，每个项目一个文件
 ├── schema/
 │   └── repo.schema.json        # front matter 的 JSON Schema，CI 用它把关
 ├── repos-parser/               # 解析器：repos/*.md → web/public/data/*.json
@@ -226,8 +225,7 @@ CityU Hub 是一個面向**香港城市大學（CityU）學生開源項目**的�
 CityU-Hub/
 ├── repos/                      # 項目條目：每個項目一個 Markdown（front matter + 正文）
 │   ├── _template.md            # 提交模板，複製它開始寫自己的項目
-│   ├── CityU-Beamer.md
-│   └── extend-slides.md
+│   └── *.md                    # 已收錄的項目，每個項目一個檔案
 ├── schema/
 │   └── repo.schema.json        # front matter 的 JSON Schema，CI 用它把關
 ├── repos-parser/               # 解析器：repos/*.md → web/public/data/*.json
@@ -388,8 +386,7 @@ The three problems it solves:
 CityU-Hub/
 ├── repos/                      # One Markdown file per project (front matter + body)
 │   ├── _template.md            # Submission template — copy it to get started
-│   ├── CityU-Beamer.md
-│   └── extend-slides.md
+│   └── *.md                    # One file per listed project
 ├── schema/
 │   └── repo.schema.json        # JSON Schema for the front matter, enforced by CI
 ├── repos-parser/               # Parser: repos/*.md → web/public/data/*.json
