@@ -52,6 +52,13 @@ export function parseRepoUrl(input) {
   return stripped.length === 2 ? buildRef(stripped[0], stripped[1], null, '') : null;
 }
 
+/** 429 一定是限流；403 只有在配额耗尽或带 Retry-After 时才是限流，其余是访问被拒 */
+function isRateLimited(response) {
+  if (response.status === 429) return true;
+  if (response.status !== 403) return false;
+  return response.headers?.get('x-ratelimit-remaining') === '0' || response.headers?.has('retry-after') === true;
+}
+
 export function createGithubClient(config, { fetchImpl = globalThis.fetch } = {}) {
   async function request(url) {
     try {
@@ -73,8 +80,11 @@ export function createGithubClient(config, { fetchImpl = globalThis.fetch } = {}
     async fetchRepoMeta(ref) {
       const url = `https://api.github.com/repos/${ref.owner}/${ref.repo}`;
       const response = await request(url);
-      if (response.status === 403 || response.status === 429) {
+      if (isRateLimited(response)) {
         throw new Error('GitHub API 调用次数已达上限，请配置 GITHUB_TOKEN 后重试');
+      }
+      if (response.status === 403) {
+        throw new Error(`GitHub 拒绝访问仓库 ${ref.owner}/${ref.repo}（HTTP 403，可能被封禁或需要授权）`);
       }
       if (response.status === 404) throw new Error(`GitHub 上找不到仓库 ${ref.owner}/${ref.repo}`);
       if (!response.ok) throw new Error(`获取 GitHub 仓库信息失败（HTTP ${response.status}）`);

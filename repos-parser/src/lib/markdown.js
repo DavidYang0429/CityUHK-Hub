@@ -185,21 +185,27 @@ export function fillProjectContent(markdown, { readme = '', description = '' } =
   return result.trim();
 }
 
-/** 仓库没提供 topics 时，用 README 关键词兜底推断标签 */
-export function guessTagsFromReadme(markdown, { language, topics = [] } = {}) {
-  const lower = String(markdown ?? '').toLowerCase();
-  const dictionary = [
-    'react', 'vue', 'angular', 'svelte', 'next.js', 'vite', 'tailwindcss', 'typescript', 'javascript',
-    'node.js', 'express', 'python', 'django', 'flask', 'fastapi', 'java', 'spring boot', 'go', 'rust',
-    'docker', 'kubernetes', 'mysql', 'postgresql', 'mongodb', 'redis', 'machine learning', 'deep learning',
-    'pytorch', 'tensorflow', 'llm',
-  ];
+const TAG_DICTIONARY = [
+  'react', 'vue', 'angular', 'svelte', 'next.js', 'vite', 'tailwindcss', 'typescript', 'javascript',
+  'node.js', 'express', 'python', 'django', 'flask', 'fastapi', 'java', 'spring boot', 'golang', 'rust',
+  'docker', 'kubernetes', 'mysql', 'postgresql', 'mongodb', 'redis', 'machine learning', 'deep learning',
+  'pytorch', 'tensorflow', 'llm',
+];
 
+const escapeRegExp = (value) => value.replace(/[.*+?^${}()|[\]\\]/g, '\\$&');
+const TAG_PATTERNS = TAG_DICTIONARY.map((key) => [
+  key,
+  // 只匹配完整单词，避免 java 命中 javascript、go 命中 google
+  new RegExp(`(?<![a-z0-9])${escapeRegExp(key)}(?![a-z0-9])`),
+]);
+
+/** 用 README 关键词推断标签，并带上仓库主语言；GitHub topics 由调用方单独合并 */
+export function guessTagsFromReadme(markdown, { language } = {}) {
+  const lower = String(markdown ?? '').toLowerCase();
   const found = new Set();
-  for (const t of topics) found.add(String(t).toLowerCase());
   if (language) found.add(String(language).toLowerCase());
-  for (const key of dictionary) {
-    if (lower.includes(key)) found.add(key);
+  for (const [key, pattern] of TAG_PATTERNS) {
+    if (pattern.test(lower)) found.add(key === 'golang' ? 'go' : key);
   }
   return [...found].slice(0, 12);
 }

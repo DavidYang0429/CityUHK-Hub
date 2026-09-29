@@ -4,6 +4,7 @@ import { fileURLToPath } from 'node:url';
 import Ajv2020 from 'ajv/dist/2020.js';
 import addFormats from 'ajv-formats';
 import { parseFrontmatterDocument } from './lib/frontmatter.js';
+import { canonicalRepoUrl, deriveProjectId } from './lib/project-id.js';
 
 const parserRoot = path.resolve(path.dirname(fileURLToPath(import.meta.url)), '..');
 const projectRoot = path.resolve(parserRoot, '..');
@@ -29,8 +30,9 @@ for (const file of files) {
       const details = (validateSchema.errors ?? []).map((error) => `${error.instancePath || '/'} ${error.message}`).join('; ');
       throw new Error(`不符合 repo.schema.json：${details}`);
     }
-    const id = meta.id ?? file.replace(/\.md$/i, '');
-    const repoUrl = meta.repoUrl.toLowerCase().replace(/\/+$/, '').replace(/\.git$/, '');
+    const id = deriveProjectId(meta);
+    if (!id) throw new Error('repoUrl 不是可识别的 GitHub 仓库地址');
+    const repoUrl = canonicalRepoUrl(meta.repoUrl);
     if (ids.has(id)) failures.push(`${file}: id 与 ${ids.get(id)} 重复（${id}）`);
     else ids.set(id, file);
     if (repoUrls.has(repoUrl)) failures.push(`${file}: repoUrl 与 ${repoUrls.get(repoUrl)} 重复（${meta.repoUrl}）`);

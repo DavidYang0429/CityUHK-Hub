@@ -52,8 +52,8 @@ function requireBoolean(value, name) {
 }
 
 function requireEnrollmentYear(value) {
-  if (!Number.isInteger(value) || value < 1960 || value > 2100) {
-    throw invalid('enrollmentYear 必须是 1960 到 2100 之间的年份');
+  if (!Number.isInteger(value) || value < 2000 || value > 2100) {
+    throw invalid('enrollmentYear 必须是 2000 到 2100 之间的年份');
   }
   return value;
 }
