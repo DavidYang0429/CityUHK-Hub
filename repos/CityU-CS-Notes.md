@@ -1,8 +1,8 @@
 ---
-title: CityU-CS-Notes
+title: CityU-CS-Msc-Notes
 author: lavine888
 authorName: LavineX
-major: Computing / Computer Science (MSc)
+major: Computer Science
 enrollmentYear: 2025
 repoUrl: https://github.com/lavine888/CityU-CS-Notes
 tags:
