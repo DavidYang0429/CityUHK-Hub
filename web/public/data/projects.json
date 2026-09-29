@@ -1,7 +1,42 @@
 {
-  "generatedAt": "2026-09-28T11:21:35.900Z",
-  "total": 7,
+  "generatedAt": "2026-09-29T19:39:39.944Z",
+  "total": 11,
   "projects": [
+    {
+      "id": "yongzeyang-cscse-certification-review-cityu-ec-to-cs",
+      "name": "留服认证专业复核攻略（城大 MScEC → 计算机科学与技术）",
+      "author": "YongzeYang",
+      "authorName": "Yongze Yang",
+      "major": "Electronic Commerce",
+      "enrollmentYear": 2023,
+      "authorAvatar": "",
+      "repo": "YongzeYang/CSCSE-Certification-Review-CityU-EC-to-CS",
+      "about": "",
+      "description": "留服认证专业复核的保姆级攻略。作者毕业于香港城市大学理学硕士（电子商贸）项目，拿到教育部留学服务中心的初次认证结果后申请专业领域复核，把认证专业从“电子商贸”改成了“计算机科学与技术（电子商贸）”。仓库整理了这次复核的完整流程、全套申请材料模板和准备思路。",
+      "tags": [
+        "cscse",
+        "留服认证",
+        "学历认证",
+        "专业复核",
+        "msc-ec",
+        "计算机科学与技术",
+        "求职",
+        "考公",
+        "template"
+      ],
+      "category": "学习辅助",
+      "githubUrl": "https://github.com/YongzeYang/CSCSE-Certification-Review-CityU-EC-to-CS",
+      "demoUrl": null,
+      "hasRelease": false,
+      "stars": 0,
+      "starsGained7d": null,
+      "forks": 0,
+      "language": "",
+      "license": "",
+      "createdAt": "2026-09-29",
+      "updatedAt": "2026-09-29",
+      "addedAt": "2026-09-29"
+    },
     {
       "id": "famalhaut04-canvas-weekly-hub",
       "name": "Canvas Weekly Hub（城大 Canvas 课程助手）",
@@ -89,6 +124,104 @@
       "createdAt": "2026-09-22",
       "updatedAt": "2026-09-22",
       "addedAt": "2026-09-23"
+    },
+    {
+      "id": "lavine888-cityu-cs-notes",
+      "name": "CityU-CS-Msc-Notes",
+      "author": "lavine888",
+      "authorName": "LavineX",
+      "major": "Computer Science",
+      "enrollmentYear": 2025,
+      "authorAvatar": "",
+      "repo": "lavine888/CityU-CS-Notes",
+      "about": "",
+      "description": "香港城市大学 MSc 计算机相关课程的笔记与资料仓库。按实际修课记录建立课程目录，汇集作者整理的学习内容和课程社群分享的资料，供同学按课号查找和参考。",
+      "tags": [
+        "msc-cs",
+        "notes",
+        "course",
+        "study-materials"
+      ],
+      "category": "学习辅助",
+      "githubUrl": "https://github.com/lavine888/CityU-CS-Notes",
+      "demoUrl": null,
+      "hasRelease": false,
+      "stars": 0,
+      "starsGained7d": null,
+      "forks": 0,
+      "language": "",
+      "license": "",
+      "createdAt": "2026-09-29",
+      "updatedAt": "2026-09-29",
+      "addedAt": "2026-09-29"
+    },
+    {
+      "id": "mojimoon-cityu-cs",
+      "name": "CityU-CS",
+      "author": "mojimoon",
+      "authorName": "Fan Wang",
+      "major": "Computer Science",
+      "enrollmentYear": 2022,
+      "authorAvatar": "",
+      "repo": "mojimoon/CityU-CS",
+      "about": "",
+      "description": "香港城市大学 BSc CS 课程笔记与项目汇总。为未来的学生提供全面的资源，包括课程笔记、复习总结、练习题和项目示例，帮助他们更好地理解课程内容并为考试做好准备。作者专业 GPA 4.17/4.3（年级排名 1/190），希望通过分享自己的学习经验和资源，帮助更多的同学取得优异成绩。",
+      "tags": [
+        "bsc-cs",
+        "notes",
+        "course",
+        "review",
+        "go"
+      ],
+      "category": "学习辅助",
+      "githubUrl": "https://github.com/mojimoon/CityU-CS",
+      "demoUrl": "https://www.mojimoon.top/CityU-CS/",
+      "hasRelease": false,
+      "stars": 0,
+      "starsGained7d": null,
+      "forks": 0,
+      "language": "",
+      "license": "",
+      "createdAt": "2026-09-29",
+      "updatedAt": "2026-09-29",
+      "addedAt": "2026-09-29"
+    },
+    {
+      "id": "yongzeyang-cityu-cs5489-machine-learning-algorithms-and-appl",
+      "name": "CS5489 机器学习：算法与应用（23 Fall 课程资料）",
+      "author": "YongzeYang",
+      "authorName": "Yongze Yang",
+      "major": "Electronic Commerce",
+      "enrollmentYear": 2023,
+      "authorAvatar": "",
+      "repo": "YongzeYang/CityU-CS5489-Machine-Learning-Algorithms-and-Applications-23fall",
+      "about": "",
+      "description": "香港城市大学计算机系研究生课程 CS5489 Machine Learning: Algorithms and Applications 的学习资料合集。作者在 2023 年秋季学期修读这门课，仓库里放的是自己（和组员）完成的 Tutorial、Assignment、小组项目的代码与报告，另外整理了往年的期中、期末试卷，方便复习。这些都是作者自己的作业，不是标准答案。",
+      "tags": [
+        "cs5489",
+        "machine-learning",
+        "course",
+        "kaggle",
+        "jupyter",
+        "python",
+        "past-papers",
+        "23fall",
+        "go",
+        "machine learning",
+        "llm"
+      ],
+      "category": "学习辅助",
+      "githubUrl": "https://github.com/YongzeYang/CityU-CS5489-Machine-Learning-Algorithms-and-Applications-23fall",
+      "demoUrl": null,
+      "hasRelease": false,
+      "stars": 0,
+      "starsGained7d": null,
+      "forks": 0,
+      "language": "",
+      "license": "",
+      "createdAt": "2026-09-29",
+      "updatedAt": "2026-09-29",
+      "addedAt": "2026-09-29"
     },
     {
       "id": "royniu06-qrcode4food",
@@ -189,8 +322,8 @@
       "forks": 0,
       "language": "",
       "license": "",
-      "createdAt": "2026-09-28",
-      "updatedAt": "2026-09-28",
+      "createdAt": "2026-09-29",
+      "updatedAt": "2026-09-29",
       "addedAt": "2026-09-27"
     },
     {
@@ -229,7 +362,19 @@
   ],
   "tags": [
     {
+      "name": "course",
+      "count": 4
+    },
+    {
       "name": "python",
+      "count": 4
+    },
+    {
+      "name": "llm",
+      "count": 3
+    },
+    {
+      "name": "msc-cs",
       "count": 3
     },
     {
@@ -237,16 +382,48 @@
       "count": 2
     },
     {
-      "name": "llm",
+      "name": "go",
       "count": 2
     },
     {
-      "name": "msc-cs",
+      "name": "notes",
+      "count": 2
+    },
+    {
+      "name": "review",
       "count": 2
     },
     {
       "name": "slides",
       "count": 2
+    },
+    {
+      "name": "23fall",
+      "count": 1
+    },
+    {
+      "name": "计算机科学与技术",
+      "count": 1
+    },
+    {
+      "name": "考公",
+      "count": 1
+    },
+    {
+      "name": "留服认证",
+      "count": 1
+    },
+    {
+      "name": "求职",
+      "count": 1
+    },
+    {
+      "name": "学历认证",
+      "count": 1
+    },
+    {
+      "name": "专业复核",
+      "count": 1
     },
     {
       "name": "agent-skills",
@@ -258,6 +435,10 @@
     },
     {
       "name": "ai-agent",
+      "count": 1
+    },
+    {
+      "name": "bsc-cs",
       "count": 1
     },
     {
@@ -285,7 +466,11 @@
       "count": 1
     },
     {
-      "name": "course",
+      "name": "cs5489",
+      "count": 1
+    },
+    {
+      "name": "cscse",
       "count": 1
     },
     {
@@ -313,11 +498,27 @@
       "count": 1
     },
     {
+      "name": "jupyter",
+      "count": 1
+    },
+    {
+      "name": "kaggle",
+      "count": 1
+    },
+    {
       "name": "kanban",
       "count": 1
     },
     {
       "name": "kimi",
+      "count": 1
+    },
+    {
+      "name": "machine learning",
+      "count": 1
+    },
+    {
+      "name": "machine-learning",
       "count": 1
     },
     {
@@ -333,7 +534,15 @@
       "count": 1
     },
     {
+      "name": "msc-ec",
+      "count": 1
+    },
+    {
       "name": "obsidian",
+      "count": 1
+    },
+    {
+      "name": "past-papers",
       "count": 1
     },
     {
@@ -357,15 +566,19 @@
       "count": 1
     },
     {
-      "name": "review",
-      "count": 1
-    },
-    {
       "name": "skills",
       "count": 1
     },
     {
+      "name": "study-materials",
+      "count": 1
+    },
+    {
       "name": "study-notes",
+      "count": 1
+    },
+    {
+      "name": "template",
       "count": 1
     },
     {
@@ -374,6 +587,10 @@
     }
   ],
   "authors": [
+    {
+      "name": "YongzeYang",
+      "count": 2
+    },
     {
       "name": "B1ad3",
       "count": 1
@@ -387,7 +604,15 @@
       "count": 1
     },
     {
+      "name": "lavine888",
+      "count": 1
+    },
+    {
       "name": "lowen",
+      "count": 1
+    },
+    {
+      "name": "mojimoon",
       "count": 1
     },
     {
@@ -406,7 +631,7 @@
   "categories": [
     {
       "name": "学习辅助",
-      "count": 4
+      "count": 8
     },
     {
       "name": "科研工具",
