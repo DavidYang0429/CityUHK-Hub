@@ -327,7 +327,8 @@ const root = rootRef.current;
 const face = faceRef.current;
 const frames = frameRefs.current.filter((el): el is HTMLDivElement => el !== null);
 if (!root || !face || frames.length !== CAT_FRAMES.length) return;
-const reducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+// MediaQueryList.matches 是实时值，读取时用它，用户中途切换系统设置也能生效
+    const reducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)');
 const started = performance.now();
 let grid = buildNavGrid();
 const pet = {
@@ -639,7 +640,7 @@ const frame = (now: number) => {
 const dt = Math.min(32, now - lastFrame) / 1000;
 lastFrame = now;
 if (gridDirty) rebuildGrid();
-if (!reducedMotion && !document.hidden) {
+if (!reducedMotion.matches && !document.hidden) {
 updateBehavior(now);
 integrate(dt);
       }
