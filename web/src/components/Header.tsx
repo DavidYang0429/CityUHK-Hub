@@ -5,7 +5,7 @@ import { SubmitProject } from './SubmitProject';
 import { ThemeToggle } from './ThemeToggle';
 import { UsefulLinks } from './UsefulLinks';
 
-const cityuLogo = `${import.meta.env.BASE_URL}cityu.jpg`;
+const cityuLogo = `${import.meta.env.BASE_URL}cityu2.jpg`;
 
 interface HeaderProps {
   searchSlot?: ReactNode;
@@ -29,7 +29,7 @@ export function Header({ searchSlot, onOpenSidebar }: HeaderProps) {
         )}
 
         <Link to="/" className="flex shrink-0 items-center gap-2 focus-visible:outline-none sm:gap-3">
-          {/* 原图 870×640，靠 w-auto 保持比例不裁切 */}
+          {/* 原图 882×557，靠 w-auto 保持比例不裁切 */}
           <img
             src={cityuLogo}
             alt="CityU Hub 标志"

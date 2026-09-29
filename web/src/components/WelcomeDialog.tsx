@@ -5,8 +5,8 @@ import { ArrowRight, BookOpen, HeartHandshake } from 'lucide-react';
 // 首访欢迎弹窗的「不再提示」标记；scripts/update-screenshot.mjs 有同名常量，改动时两处同步
 const DISMISS_KEY = 'cityu-hub:welcome-dismissed';
 
-// 站点 logo（白底 JPEG），与页头共用同一张
-const cityuLogo = `${import.meta.env.BASE_URL}cityu.jpg`;
+// 站点 logo（白底 JPEG，去字标的图形版），与页头共用同一张
+const cityuLogo = `${import.meta.env.BASE_URL}cityu2.jpg`;
 
 const BENEFITS: Array<{ emoji: string; title: string; detail: string }> = [
   {
