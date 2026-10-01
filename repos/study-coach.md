@@ -7,12 +7,14 @@ enrollmentYear: 2026
 repoUrl: https://github.com/oneonew-gif/study-coach
 homepageUrl: ''
 tags:
-  - 学习工具
-  - 效率
-  - AI
-  - 笔记
-  - Canvas
-category: 学习工具
+  - study-tools
+  - productivity
+  - ai
+  - notes
+  - canvas
+  - cityu
+  - study-coach
+category: 学习辅助
 featured: false
 status: active
 ---
