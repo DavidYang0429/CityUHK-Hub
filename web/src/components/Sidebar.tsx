@@ -1,3 +1,4 @@
+import { useState } from 'react';
 import { FolderTree, Tags, Trophy } from 'lucide-react';
 import type { AuthorItem, CountItem } from '../types';
 import { slugify } from '../utils/slugify';
@@ -35,6 +36,10 @@ export function Sidebar({
   onToggleTag,
   onSelectAuthor,
 }: SidebarProps) {
+  /** 作者榜默认只露前 8 位，展开后在面板内滚动浏览全部 */
+  const [showAllAuthors, setShowAllAuthors] = useState(false);
+  const visibleAuthors = showAllAuthors ? authors : authors.slice(0, 8);
+
   return (
     <nav aria-label="筛选面板" className="space-y-5">
       <section aria-labelledby={CATEGORY_HEADING_ID} className="panel-brutal p-3">
@@ -94,8 +99,10 @@ export function Sidebar({
           <Trophy className="size-3.5" />
           AUTHORS
         </h3>
-        <ul className="mt-3 space-y-1">
-          {authors.slice(0, 8).map((author, index) => (
+        <ul
+          className={`mt-3 space-y-1${showAllAuthors ? ' max-h-72 overflow-y-auto pr-1' : ''}`}
+        >
+          {visibleAuthors.map((author, index) => (
             <li key={author.name}>
               <button
                 type="button"
@@ -135,6 +142,16 @@ export function Sidebar({
             </li>
           ))}
         </ul>
+        {authors.length > 8 && (
+          <button
+            type="button"
+            onClick={() => setShowAllAuthors((value) => !value)}
+            aria-expanded={showAllAuthors}
+            className="mono mt-2 w-full border-2 border-line px-2 py-1.5 text-[11px] text-muted transition-colors hover:border-brand hover:text-brand"
+          >
+            {showAllAuthors ? '收起作者榜 ↑' : `展开全部 ${authors.length} 位作者 ↓`}
+          </button>
+        )}
       </section>
     </nav>
   );

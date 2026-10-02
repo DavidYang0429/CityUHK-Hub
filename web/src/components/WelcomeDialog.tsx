@@ -6,7 +6,7 @@ import { ArrowRight, BookOpen, HeartHandshake } from 'lucide-react';
 const DISMISS_KEY = 'cityu-hub:welcome-dismissed';
 
 // 有白底的原始 logo；public/cityu-logo.png 是抠底版，暂未用到
-const cityuLogo = `${import.meta.env.BASE_URL}cityu.jpg`;
+const cityuLogo = `${import.meta.env.BASE_URL}cityu2.jpg`;
 
 const BENEFITS: Array<{ emoji: string; title: string; detail: string }> = [
   {
