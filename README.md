@@ -13,6 +13,7 @@
 [![GitHub stars](https://img.shields.io/github/stars/Warpshlczy/CityUHK-Hub?style=flat&logo=github&label=stars&color=f47c94)](https://github.com/Warpshlczy/CityUHK-Hub/stargazers)
 [![License: MIT](https://img.shields.io/badge/license-MIT-f47c94?style=flat&logo=opensourceinitiative&logoColor=white)](LICENSE)
 [![PRs Welcome](https://img.shields.io/badge/PRs-welcome-f47c94?style=flat&logo=github&logoColor=white)](CONTRIBUTING.md)
+[![Code of Conduct](https://img.shields.io/badge/code%20of%20conduct-Contributor%20Covenant%202.1-f47c94?style=flat&logo=opensourceinitiative&logoColor=white)](CODE_OF_CONDUCT.md)
 
 [![React](https://img.shields.io/badge/react-19-61DAFB?style=flat-square&logo=react&logoColor=black)](https://react.dev) [![TypeScript](https://img.shields.io/badge/typescript-5.9-3178C6?style=flat-square&logo=typescript&logoColor=white)](https://www.typescriptlang.org) [![Vite](https://img.shields.io/badge/vite-6-646CFF?style=flat-square&logo=vite&logoColor=white)](https://vite.dev) [![Tailwind CSS](https://img.shields.io/badge/tailwindcss-4-06B6D4?style=flat-square&logo=tailwindcss&logoColor=white)](https://tailwindcss.com) [![React Router](https://img.shields.io/badge/react%20router-7-CA4245?style=flat-square&logo=reactrouter&logoColor=white)](https://reactrouter.com) [![lucide-react](https://img.shields.io/badge/lucide--react-1-F56565?style=flat-square&logo=lucide&logoColor=white)](https://lucide.dev)
 
