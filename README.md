@@ -1,13 +1,5 @@
 <div align="center">
 
-<img src="web/public/cityu.jpg" alt="CityU(HK) Hub logo" width="280" />
-
-# CityU(HK) Hub
-
-**香港城市大學學生項目和開源自助檢索平台 · 香港城大开源自助导航 · Discover what CityUHK students are building**
-
-**[繁體中文](#繁體中文) · [简体中文](#简体中文) · [English](#english)**
-
 [![CI](https://github.com/Warpshlczy/CityUHK-Hub/actions/workflows/ci.yml/badge.svg)](https://github.com/Warpshlczy/CityUHK-Hub/actions/workflows/ci.yml)
 [![Sync & rebuild](https://github.com/Warpshlczy/CityUHK-Hub/actions/workflows/deploy.yml/badge.svg)](https://github.com/Warpshlczy/CityUHK-Hub/actions/workflows/deploy.yml)
 [![GitHub stars](https://img.shields.io/github/stars/Warpshlczy/CityUHK-Hub?style=flat&logo=github&label=stars&color=f47c94)](https://github.com/Warpshlczy/CityUHK-Hub/stargazers)
@@ -15,9 +7,17 @@
 [![PRs Welcome](https://img.shields.io/badge/PRs-welcome-f47c94?style=flat&logo=github&logoColor=white)](CONTRIBUTING.md)
 [![Code of Conduct](https://img.shields.io/badge/code%20of%20conduct-Contributor%20Covenant%202.1-f47c94?style=flat&logo=opensourceinitiative&logoColor=white)](CODE_OF_CONDUCT.md)
 
-[![React](https://img.shields.io/badge/react-19-61DAFB?style=flat-square&logo=react&logoColor=black)](https://react.dev) [![TypeScript](https://img.shields.io/badge/typescript-5.9-3178C6?style=flat-square&logo=typescript&logoColor=white)](https://www.typescriptlang.org) [![Vite](https://img.shields.io/badge/vite-6-646CFF?style=flat-square&logo=vite&logoColor=white)](https://vite.dev) [![Tailwind CSS](https://img.shields.io/badge/tailwindcss-4-06B6D4?style=flat-square&logo=tailwindcss&logoColor=white)](https://tailwindcss.com) [![React Router](https://img.shields.io/badge/react%20router-7-CA4245?style=flat-square&logo=reactrouter&logoColor=white)](https://reactrouter.com) [![lucide-react](https://img.shields.io/badge/lucide--react-1-F56565?style=flat-square&logo=lucide&logoColor=white)](https://lucide.dev)
+[![React](https://img.shields.io/badge/react-19-61DAFB?style=flat&logo=react&logoColor=black)](https://react.dev) [![TypeScript](https://img.shields.io/badge/typescript-5.9-3178C6?style=flat&logo=typescript&logoColor=white)](https://www.typescriptlang.org) [![Vite](https://img.shields.io/badge/vite-6-646CFF?style=flat&logo=vite&logoColor=white)](https://vite.dev) [![Tailwind CSS](https://img.shields.io/badge/tailwindcss-4-06B6D4?style=flat&logo=tailwindcss&logoColor=white)](https://tailwindcss.com) [![React Router](https://img.shields.io/badge/react%20router-7-CA4245?style=flat&logo=reactrouter&logoColor=white)](https://reactrouter.com) [![lucide-react](https://img.shields.io/badge/lucide--react-1-F56565?style=flat&logo=lucide&logoColor=white)](https://lucide.dev)
 
-[![Node.js](https://img.shields.io/badge/node-%E2%89%A520.6-339933?style=flat-square&logo=node.js&logoColor=white)](https://nodejs.org) [![marked](https://img.shields.io/badge/marked-15-111111?style=flat-square&logo=markdown&logoColor=white)](https://marked.js.org) [![ajv](https://img.shields.io/badge/ajv-8-23C8D2?style=flat-square)](https://ajv.js.org) [![js-yaml](https://img.shields.io/badge/js--yaml-4-CB171E?style=flat-square&logo=yaml&logoColor=white)](https://github.com/nodeca/js-yaml) [![GitHub Actions](https://img.shields.io/badge/github%20actions-2088FF?style=flat-square&logo=githubactions&logoColor=white)](https://github.com/Warpshlczy/CityUHK-Hub/actions)
+[![Node.js](https://img.shields.io/badge/node-%E2%89%A520.6-339933?style=flat&logo=node.js&logoColor=white)](https://nodejs.org) [![marked](https://img.shields.io/badge/marked-15-111111?style=flat&logo=markdown&logoColor=white)](https://marked.js.org) [![ajv](https://img.shields.io/badge/ajv-8-23C8D2?style=flat)](https://ajv.js.org) [![js-yaml](https://img.shields.io/badge/js--yaml-4-CB171E?style=flat&logo=yaml&logoColor=white)](https://github.com/nodeca/js-yaml) [![GitHub Actions](https://img.shields.io/badge/github%20actions-2088FF?style=flat&logo=githubactions&logoColor=white)](https://github.com/Warpshlczy/CityUHK-Hub/actions)
+
+<img src="web/public/cityu.jpg" alt="CityU(HK) Hub logo" width="280" />
+
+# CityU(HK) Hub
+
+**香港城市大學學生項目和開源自助檢索平台 · 香港城大开源自助导航 · Discover what CityUHK students are building**
+
+**[繁體中文](#繁體中文) · [简体中文](#简体中文) · [English](#english)**
 
 </div>
 
