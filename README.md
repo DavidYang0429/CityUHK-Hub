@@ -1,10 +1,10 @@
 <div align="center">
 
-<img src="web/public/cityu.jpg" alt="CityU Hub logo" width="280" />
+<img src="web/public/cityu.jpg" alt="CityU(HK) Hub logo" width="280" />
 
-# CityU Hub
+# CityU(HK) Hub
 
-**香港城大开源自助导航 · 香港城市大學學生項目和開源自助檢索平台 · Discover what CityU students are building**
+**香港城大开源自助导航 · 香港城市大學學生項目和開源自助檢索平台 · Discover what CityUHK students are building**
 
 **[简体中文](#简体中文) · [繁體中文](#繁體中文) · [English](#english)**
 
@@ -23,7 +23,7 @@
 <div align="center">
 
 <!-- screenshot:start -->
-<img src="web/public/screenshot.png" alt="CityU Hub 首页截图 / homepage screenshot" width="920" />
+<img src="web/public/screenshot.png" alt="CityU(HK) Hub 首页截图 / homepage screenshot" width="920" />
 
 <sub>截图时间 / 截圖時間 / captured at: 2026-10-01 21:34 (UTC+8) · 截图者 / 截圖者 / by: @github-actions[bot]</sub>
 
@@ -53,7 +53,7 @@
 
 ### 这是什么
 
-CityU Hub 是一个面向**香港城市大学（CityU）学生开源项目**的展示与检索网站。同学们把自己写的小工具、课程项目、科研代码提交进来，其他人在一个页面里就能按**分类 / 标签 / 语言 / 作者**筛选，搜索并直接跳到 GitHub 仓库。
+CityU(HK) Hub 是一个面向**香港城市大学（CityUHK）学生开源项目**的展示与检索网站。同学们把自己写的小工具、课程项目、科研代码提交进来，其他人在一个页面里就能按**分类 / 标签 / 语言 / 作者**筛选，搜索并直接跳到 GitHub 仓库。
 
 我们建站的初衷：
 
@@ -184,7 +184,7 @@ npm test             # 解析器与 /api 函数测试
 
 ### 成为贡献者
 
-**非常欢迎你参与 CityU Hub！** 无论你是想把自己的项目放上来、修一个前端小 bug、补一段文档，还是只提一个想法，都是这个项目需要的贡献。
+**非常欢迎你参与 CityU(HK) Hub！** 无论你是想把自己的项目放上来、修一个前端小 bug、补一段文档，还是只提一个想法，都是这个项目需要的贡献。
 
 #### 方式一：提交你的项目（最主要）
 
@@ -218,13 +218,19 @@ npm run build   # 类型检查 + 打包必须通过
 
 **期待在贡献者名单里看到你。**
 
+### 收录原则
+
+本项目本着**自愿和开源互助**的目的，欢迎所有城大创作者。我们的理念与互联网的开源精神、以及学校精神保持一致，旨在促进学习交流、打破壁垒。
+
+若出现不遵守互联网普遍共识的开源规定与契约、脱离原有技术内容，或借开源之名行破坏开源社区和氛围的行为，仓库所有者有权不予收录或下架相关仓库。
+
 ### 许可证
 
-本项目基于 [MIT License](LICENSE) 开源，版权归 **CityU Hub contributors** 所有。
+本项目基于 [MIT License](LICENSE) 开源，版权归 **CityU(HK) Hub contributors** 所有。
 
 你可以自由使用、复制、修改、合并、发布、分发、再授权及/或销售本软件的副本，只需在副本或实质性部分中保留上述版权声明与许可声明。本软件按「原样」提供，不附带任何形式的明示或默示担保。
 
-这意味着：**你提交到 `repos/` 的项目条目仍然归你所有**，MIT 只覆盖 CityU Hub 自身的站点与解析器代码。
+这意味着：**你提交到 `repos/` 的项目条目仍然归你所有**，MIT 只覆盖 CityU(HK) Hub 自身的站点与解析器代码。
 
 ### 联系我们
 
@@ -238,7 +244,7 @@ npm run build   # 类型检查 + 打包必须通过
 
 ### 這是什麼
 
-CityU Hub 是一個面向**香港城市大學（CityU）學生開源項目**的展示與檢索網站。同學們把自己寫的小工具、課程項目、研究程式碼提交進來，其他人在同一個頁面就能按**分類 / 標籤 / 語言 / 作者**篩選，搜尋並直接跳到 GitHub 儲存庫。
+CityU(HK) Hub 是一個面向**香港城市大學（CityUHK）學生開源項目**的展示與檢索網站。同學們把自己寫的小工具、課程項目、研究程式碼提交進來，其他人在同一個頁面就能按**分類 / 標籤 / 語言 / 作者**篩選，搜尋並直接跳到 GitHub 儲存庫。
 
 網站解決的三個問題：
 
@@ -370,7 +376,7 @@ npm test             # 解析器與 /api 函式測試
 
 ### 成為貢獻者
 
-**非常歡迎你參與 CityU Hub！** 無論你是想把自己的項目放上來、修一個前端小 bug、補一段文件，還是只提一個想法，都是這個項目需要的貢獻。
+**非常歡迎你參與 CityU(HK) Hub！** 無論你是想把自己的項目放上來、修一個前端小 bug、補一段文件，還是只提一個想法，都是這個項目需要的貢獻。
 
 #### 方式一：提交你的項目（最主要）
 
@@ -404,13 +410,19 @@ npm run build   # 型別檢查 + 打包必須通過
 
 **期待在貢獻者名單裡看到你。**
 
+### 收錄原則
+
+本項目本着**自願和開源互助**的目的，歡迎所有城大創作者。我們的理念與互聯網的開源精神、以及學校精神保持一致，旨在促進學習交流、打破壁壘。
+
+若出現不遵守互聯網普遍共識的開源規定與契約、脫離原有技術內容，或借開源之名行破壞開源社區和氛圍的行為，倉庫所有者有權不予收錄或下架相關倉庫。
+
 ### 授權條款
 
-本項目基於 [MIT License](LICENSE) 開源，版權歸 **CityU Hub contributors** 所有。
+本項目基於 [MIT License](LICENSE) 開源，版權歸 **CityU(HK) Hub contributors** 所有。
 
 你可以自由使用、複製、修改、合併、發佈、分發、再授權及/或銷售本軟體的副本，只需在副本或實質性部分中保留上述版權聲明與授權聲明。本軟體按「原樣」提供，不附帶任何形式的明示或默示擔保。
 
-這意味著：**你提交到 `repos/` 的項目條目仍然歸你所有**，MIT 只覆蓋 CityU Hub 自身的網站與解析器程式碼。
+這意味著：**你提交到 `repos/` 的項目條目仍然歸你所有**，MIT 只覆蓋 CityU(HK) Hub 自身的網站與解析器程式碼。
 
 ### 聯絡我們
 
@@ -424,7 +436,7 @@ npm run build   # 型別檢查 + 打包必須通過
 
 ### What is this
 
-CityU Hub is a showcase and search site for **open-source projects built by students of City University of Hong Kong (CityU)**. Students submit their tools, course projects and research code; everyone else can filter by **category / tag / language / author**, search, and jump straight to the GitHub repository from a single page.
+CityU(HK) Hub is a showcase and search site for **open-source projects built by students of City University of Hong Kong (CityUHK)**. Students submit their tools, course projects and research code; everyone else can filter by **category / tag / language / author**, search, and jump straight to the GitHub repository from a single page.
 
 The three problems it solves:
 
@@ -556,7 +568,7 @@ site change PR ────────► dev ─────┘
 
 ### Become a contributor
 
-**You are very welcome to contribute to CityU Hub!** Adding your own project, fixing a small front-end bug, improving docs or just sharing an idea — all of it moves this project forward.
+**You are very welcome to contribute to CityU(HK) Hub!** Adding your own project, fixing a small front-end bug, improving docs or just sharing an idea — all of it moves this project forward.
 
 #### Option 1: Submit your project (the main path)
 
@@ -590,13 +602,19 @@ Typos, English translations, UI suggestions — open an issue or send a PR. Thes
 
 **We look forward to seeing your name among the contributors.**
 
+### Inclusion policy
+
+This project runs on a **voluntary, open-source, mutual-aid** basis, and all CityUHK creators are welcome. Our values align with the spirit of open source and the spirit of the University: to encourage learning and exchange, and to break down barriers.
+
+Should anyone fail to follow the open-source rules and contracts recognised across the internet, drift away from the original technical content, or act in the name of open source while damaging the open-source community and its atmosphere, the repository owner reserves the right to decline or remove the relevant repositories.
+
 ### License
 
-Released under the [MIT License](LICENSE), copyright © **CityU Hub contributors**.
+Released under the [MIT License](LICENSE), copyright © **CityU(HK) Hub contributors**.
 
 You are free to use, copy, modify, merge, publish, distribute, sublicense and/or sell copies of the software, as long as the copyright and permission notices are kept in all copies or substantial portions. The software is provided "as is", without warranty of any kind, express or implied.
 
-In practice: **the project entries you submit under `repos/` remain yours** — MIT covers the CityU Hub site and parser code only.
+In practice: **the project entries you submit under `repos/` remain yours** — MIT covers the CityU(HK) Hub site and parser code only.
 
 ### Contact
 
@@ -608,8 +626,8 @@ Want to submit a project, report a problem, suggest an idea, or just say hi? Dro
 
 <div align="center">
 
-**[回到顶部 / Back to top](#cityu-hub)**
+**[回到顶部 / Back to top](#cityuhk-hub)**
 
-Made by CityU students
+Made by CityUHK students
 
 </div>

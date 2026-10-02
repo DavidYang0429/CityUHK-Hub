@@ -9,17 +9,17 @@ interface UsefulLink {
 
 const USEFUL_LINKS: UsefulLink[] = [
   {
-    name: 'CityU AIMS',
+    name: 'CityUHK AIMS',
     url: 'https://banweb.cityu.edu.hk/',
     description: '选课、成绩与学籍系统',
   },
   {
-    name: 'CityU Canvas',
+    name: 'CityUHK Canvas',
     url: 'https://canvas.cityu.edu.hk/',
     description: '课程资料、作业与测验',
   },
   {
-    name: 'CityU 官网',
+    name: 'CityUHK 官网',
     url: 'https://www.cityu.edu.hk/',
     description: '香港城市大学官方网站',
   },

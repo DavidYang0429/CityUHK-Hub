@@ -32,14 +32,14 @@ export function Header({ searchSlot, onOpenSidebar }: HeaderProps) {
           {/* 原图 882×557，靠 w-auto 保持比例不裁切 */}
           <img
             src={cityuLogo}
-            alt="CityU Hub 标志"
+            alt="CityU(HK) Hub 标志"
             width={120}
             height={72}
             className="glow-pulse h-11 w-auto sm:h-18"
           />
           <span className="flex flex-col gap-1 leading-none sm:gap-1.5">
             <span className="pixel text-[13px] font-bold text-ink [text-shadow:2px_2px_0_rgba(244,124,148,0.7)] sm:text-[16px]">
-              CITYU&nbsp;HUB
+              CITYU(HK)&nbsp;HUB
             </span>
             <span className="mono text-[11px] font-bold text-muted sm:text-[14px]">
               城大开源自助导航

@@ -21,7 +21,7 @@ const dataDir = path.resolve(process.env.DATA_DIR ?? path.join(webDir, 'public',
 const SITE_ORIGIN = process.env.SITE_ORIGIN ?? 'https://cityu-hub.bond';
 /** 部署在子路径时才需要改（默认部署在域名根路径） */
 const BASE_PATH = (process.env.BASE_PATH ?? '/').replace(/\/+$/, '');
-const SITE_NAME = 'CityU Hub';
+const SITE_NAME = 'CityU(HK) Hub';
 
 const HTML_ESCAPES = { '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;' };
 
@@ -162,7 +162,7 @@ const urls = [];
 {
   let html = upsertHead(shell, {
     title: `${SITE_NAME} · 城大开源自助导航`,
-    description: `香港城市大学（CityU）学生开源项目导航：已收录 ${projects.length} 个项目，支持按作者、专业、标签、语言与分类检索，一键直达 GitHub 仓库。`,
+    description: `香港城市大学（CityUHK）学生开源项目导航：已收录 ${projects.length} 个项目，支持按作者、专业、标签、语言与分类检索，一键直达 GitHub 仓库。`,
     canonical: `${SITE_ORIGIN}/`,
   });
   html = injectJsonLd(html, {

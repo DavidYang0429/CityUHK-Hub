@@ -24,7 +24,7 @@ export function ProjectDetailPage() {
   useEffect(() => {
     if (!project) return;
     setRouteMeta({
-      title: `${project.name} · CityU Hub`,
+      title: `${project.name} · CityU(HK) Hub`,
       description: (
         project.about ||
         project.description ||

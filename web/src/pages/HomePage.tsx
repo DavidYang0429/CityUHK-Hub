@@ -154,8 +154,8 @@ export function HomePage() {
   useEffect(() => {
     const total = data?.total ?? 0;
     setRouteMeta({
-      title: 'CityU Hub · 城大开源自助导航',
-      description: `香港城市大学（CityU）学生开源项目导航：已收录 ${total} 个项目，支持按作者、专业、标签、语言与分类检索，一键直达 GitHub 仓库。`,
+      title: 'CityU(HK) Hub · 城大开源自助导航',
+      description: `香港城市大学（CityUHK）学生开源项目导航：已收录 ${total} 个项目，支持按作者、专业、标签、语言与分类检索，一键直达 GitHub 仓库。`,
       path: '/',
     });
   }, [data?.total]);
@@ -185,12 +185,12 @@ export function HomePage() {
   );
 
   const marqueeText = [
-    'CITYU HUB // 城大开源自助导航',
+    'CITYU(HK) HUB // 城大开源自助导航',
     `${data?.total ?? 0} PROJECTS`,
     `${data?.authors.length ?? 0} CONTRIBUTORS`,
     `${data?.categories.length ?? 0} CATEGORIES`,
-    'CityU Hub 正式上线，欢迎提交项目',
-    'CityU Hub is officially launched. Welcome to submit your projects.',
+    'CityU(HK) Hub 正式上线，欢迎提交项目',
+    'CityU(HK) Hub is officially launched. Welcome to submit your projects.',
   ].join('   ✦   ');
 
   return (
@@ -349,7 +349,7 @@ export function HomePage() {
 
       <footer className="border-t-[3px] border-line bg-surface">
         <div className="mx-auto flex max-w-7xl flex-wrap items-center gap-x-5 gap-y-2 px-4 py-6 sm:px-6">
-          <span className="pixel text-[9px] text-brand">CITYU&nbsp;HUB</span>
+          <span className="pixel text-[9px] text-brand">CITYU(HK)&nbsp;HUB</span>
           <a
             href={REPO_URL}
             target="_blank"

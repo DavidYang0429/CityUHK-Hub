@@ -10,7 +10,7 @@ export function NotFoundPage() {
 
   useEffect(() => {
     setRouteMeta({
-      title: '页面不存在 · CityU Hub',
+      title: '页面不存在 · CityU(HK) Hub',
       description: '这个地址没有对应的项目，可能是链接有误或项目已被移除。',
       path: window.location.pathname,
       noindex: true,

@@ -517,8 +517,8 @@ export function SubmitPage() {
 
   useEffect(() => {
     setRouteMeta({
-      title: '提交项目 · CityU Hub',
-      description: '提交你的开源项目到 CityU Hub：先 fork 本站仓库并切到 feature 分支，验证后填写表单。',
+      title: '提交项目 · CityU(HK) Hub',
+      description: '提交你的开源项目到 CityU(HK) Hub：先 fork 本站仓库并切到 feature 分支，验证后填写表单。',
       path: window.location.pathname,
     });
   }, []);

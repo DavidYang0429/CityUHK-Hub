@@ -5,8 +5,8 @@ import { ArrowRight, BookOpen, HeartHandshake } from 'lucide-react';
 // 首访欢迎弹窗的「不再提示」标记；scripts/update-screenshot.mjs 有同名常量，改动时两处同步
 const DISMISS_KEY = 'cityu-hub:welcome-dismissed';
 
-// 站点 logo（白底 JPEG，去字标的图形版），与页头共用同一张
-const cityuLogo = `${import.meta.env.BASE_URL}cityu2.jpg`;
+// 有白底的原始 logo；public/cityu-logo.png 是抠底版，暂未用到
+const cityuLogo = `${import.meta.env.BASE_URL}cityu.jpg`;
 
 const BENEFITS: Array<{ emoji: string; title: string; detail: string }> = [
   {
@@ -76,19 +76,19 @@ export function WelcomeDialog() {
       <div
         role="dialog"
         aria-modal="true"
-        aria-label="欢迎来到 CityU Hub"
+        aria-label="欢迎来到 CityU(HK) Hub"
         className="dialog-panel-in panel-brutal relative my-4 w-full max-w-3xl p-5 sm:p-6"
       >
         <div className="flex flex-col items-center gap-2.5 text-center">
           <img
             src={cityuLogo}
-            alt="CityU Hub 标志"
+            alt="CityU(HK) Hub 标志"
             width={120}
             height={72}
             className="h-24 w-auto sm:h-32"
           />
           <h2 className="pixel text-[11px] leading-relaxed text-ink sm:text-[13px]">
-            CityU&nbsp;Hub 欢迎你 🎉
+            CityU(HK)&nbsp;Hub 欢迎你 🎉
           </h2>
         </div>
 
