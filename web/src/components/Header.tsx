@@ -39,7 +39,7 @@ export function Header({ searchSlot, onOpenSidebar }: HeaderProps) {
           />
           <span className="flex flex-col gap-1 leading-none sm:gap-1.5">
             <span className="pixel text-[13px] font-bold text-ink [text-shadow:2px_2px_0_rgba(244,124,148,0.7)] sm:text-[16px]">
-              CITYU(HK)&nbsp;HUB
+              CITYUHK&nbsp;HUB
             </span>
             <span className="mono text-[11px] font-bold text-muted sm:text-[14px]">
               城大开源自助导航

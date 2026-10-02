@@ -185,7 +185,7 @@ export function HomePage() {
   );
 
   const marqueeText = [
-    'CITYU(HK) HUB // 城大开源自助导航',
+    'CITYUHK HUB // 城大开源自助导航',
     `${data?.total ?? 0} PROJECTS`,
     `${data?.authors.length ?? 0} CONTRIBUTORS`,
     `${data?.categories.length ?? 0} CATEGORIES`,
@@ -349,7 +349,7 @@ export function HomePage() {
 
       <footer className="border-t-[3px] border-line bg-surface">
         <div className="mx-auto flex max-w-7xl flex-wrap items-center gap-x-5 gap-y-2 px-4 py-6 sm:px-6">
-          <span className="pixel text-[9px] text-brand">CITYU(HK)&nbsp;HUB</span>
+          <span className="pixel text-[9px] text-brand">CITYUHK&nbsp;HUB</span>
           <a
             href={REPO_URL}
             target="_blank"
