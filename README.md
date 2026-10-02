@@ -4,7 +4,7 @@
 
 # CityU(HK) Hub
 
-**香港城大开源自助导航 · 香港城市大學學生項目和開源自助檢索平台 · Discover what CityUHK students are building**
+**香港城市大學學生項目和開源自助檢索平台 · 香港城大开源自助导航 · Discover what CityUHK students are building**
 
 **[繁體中文](#繁體中文) · [简体中文](#简体中文) · [English](#english)**
 
