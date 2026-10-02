@@ -2,7 +2,7 @@
 title: AIMS++（城大 AIMS 非官方美化与双语插件）
 author: LENSFORGET
 authorName: LyesLou
-major: Master of Science in Venture Creation
+major: Venture Creation
 enrollmentYear: 2026
 repoUrl: https://github.com/LENSFORGET/aims-plus-plus
 homepageUrl: https://lensforget.github.io/aims-plus-plus/
