@@ -13,7 +13,7 @@
  */
 import fs from 'node:fs/promises';
 
-const REPO = process.env.GITHUB_REPOSITORY ?? 'Warpshlczy/CityU-Hub';
+const REPO = process.env.GITHUB_REPOSITORY ?? 'Warpshlczy/CityUHK-Hub';
 const README_PATH = process.env.README_PATH ?? 'README.md';
 const START = '<!-- contributors:start -->';
 const END = '<!-- contributors:end -->';

@@ -8,15 +8,15 @@
 
 **[简体中文](#简体中文) · [繁體中文](#繁體中文) · [English](#english)**
 
-[![CI](https://github.com/Warpshlczy/CityU-Hub/actions/workflows/ci.yml/badge.svg)](https://github.com/Warpshlczy/CityU-Hub/actions/workflows/ci.yml)
-[![Sync & rebuild](https://github.com/Warpshlczy/CityU-Hub/actions/workflows/deploy.yml/badge.svg)](https://github.com/Warpshlczy/CityU-Hub/actions/workflows/deploy.yml)
-[![GitHub stars](https://img.shields.io/github/stars/Warpshlczy/CityU-Hub?style=flat&logo=github&label=stars&color=f47c94)](https://github.com/Warpshlczy/CityU-Hub/stargazers)
+[![CI](https://github.com/Warpshlczy/CityUHK-Hub/actions/workflows/ci.yml/badge.svg)](https://github.com/Warpshlczy/CityUHK-Hub/actions/workflows/ci.yml)
+[![Sync & rebuild](https://github.com/Warpshlczy/CityUHK-Hub/actions/workflows/deploy.yml/badge.svg)](https://github.com/Warpshlczy/CityUHK-Hub/actions/workflows/deploy.yml)
+[![GitHub stars](https://img.shields.io/github/stars/Warpshlczy/CityUHK-Hub?style=flat&logo=github&label=stars&color=f47c94)](https://github.com/Warpshlczy/CityUHK-Hub/stargazers)
 [![License: MIT](https://img.shields.io/badge/license-MIT-f47c94?style=flat&logo=opensourceinitiative&logoColor=white)](LICENSE)
 [![PRs Welcome](https://img.shields.io/badge/PRs-welcome-f47c94?style=flat&logo=github&logoColor=white)](CONTRIBUTING.md)
 
 [![React](https://img.shields.io/badge/react-19-61DAFB?style=flat-square&logo=react&logoColor=black)](https://react.dev) [![TypeScript](https://img.shields.io/badge/typescript-5.9-3178C6?style=flat-square&logo=typescript&logoColor=white)](https://www.typescriptlang.org) [![Vite](https://img.shields.io/badge/vite-6-646CFF?style=flat-square&logo=vite&logoColor=white)](https://vite.dev) [![Tailwind CSS](https://img.shields.io/badge/tailwindcss-4-06B6D4?style=flat-square&logo=tailwindcss&logoColor=white)](https://tailwindcss.com) [![React Router](https://img.shields.io/badge/react%20router-7-CA4245?style=flat-square&logo=reactrouter&logoColor=white)](https://reactrouter.com) [![lucide-react](https://img.shields.io/badge/lucide--react-1-F56565?style=flat-square&logo=lucide&logoColor=white)](https://lucide.dev)
 
-[![Node.js](https://img.shields.io/badge/node-%E2%89%A520.6-339933?style=flat-square&logo=node.js&logoColor=white)](https://nodejs.org) [![marked](https://img.shields.io/badge/marked-15-111111?style=flat-square&logo=markdown&logoColor=white)](https://marked.js.org) [![ajv](https://img.shields.io/badge/ajv-8-23C8D2?style=flat-square)](https://ajv.js.org) [![js-yaml](https://img.shields.io/badge/js--yaml-4-CB171E?style=flat-square&logo=yaml&logoColor=white)](https://github.com/nodeca/js-yaml) [![GitHub Actions](https://img.shields.io/badge/github%20actions-2088FF?style=flat-square&logo=githubactions&logoColor=white)](https://github.com/Warpshlczy/CityU-Hub/actions)
+[![Node.js](https://img.shields.io/badge/node-%E2%89%A520.6-339933?style=flat-square&logo=node.js&logoColor=white)](https://nodejs.org) [![marked](https://img.shields.io/badge/marked-15-111111?style=flat-square&logo=markdown&logoColor=white)](https://marked.js.org) [![ajv](https://img.shields.io/badge/ajv-8-23C8D2?style=flat-square)](https://ajv.js.org) [![js-yaml](https://img.shields.io/badge/js--yaml-4-CB171E?style=flat-square&logo=yaml&logoColor=white)](https://github.com/nodeca/js-yaml) [![GitHub Actions](https://img.shields.io/badge/github%20actions-2088FF?style=flat-square&logo=githubactions&logoColor=white)](https://github.com/Warpshlczy/CityUHK-Hub/actions)
 
 </div>
 
@@ -155,10 +155,10 @@ npm test             # 解析器与 /api 函数测试
 
 | 想做的事 | 一键唤起 | 说明 |
 | --- | --- | --- |
-| 提交自己的项目 | [![Submit a project](https://img.shields.io/badge/submit%20a%20project-PR%20to%20feature-22c55e?style=for-the-badge&logo=github&logoColor=white)](https://github.com/Warpshlczy/CityU-Hub/new/feature?filename=repos/my-project.md) | 打开 GitHub 文件编辑器，没权限会自动 fork，文件建在 `feature` 分支，提交即开 PR |
-| 报告 Bug | [![Report a bug](https://img.shields.io/badge/report%20a%20bug-issue-dc2626?style=for-the-badge&logo=github&logoColor=white)](https://github.com/Warpshlczy/CityU-Hub/issues/new?labels=bug&title=%5BBug%5D%20) | 已预填标题 `[Bug]` 与 `bug` 标签 |
-| 提功能建议 / 提问 | [![Request a feature](https://img.shields.io/badge/request%20a%20feature-issue-a855f7?style=for-the-badge&logo=github&logoColor=white)](https://github.com/Warpshlczy/CityU-Hub/issues/new?labels=enhancement&title=%5BFeature%5D%20) | 已预填标题 `[Feature]` 与 `enhancement` 标签 |
-| 看别人提了什么 | [浏览全部 Issue](https://github.com/Warpshlczy/CityU-Hub/issues) | 先搜一下，避免重复 |
+| 提交自己的项目 | [![Submit a project](https://img.shields.io/badge/submit%20a%20project-PR%20to%20feature-22c55e?style=for-the-badge&logo=github&logoColor=white)](https://github.com/Warpshlczy/CityUHK-Hub/new/feature?filename=repos/my-project.md) | 打开 GitHub 文件编辑器，没权限会自动 fork，文件建在 `feature` 分支，提交即开 PR |
+| 报告 Bug | [![Report a bug](https://img.shields.io/badge/report%20a%20bug-issue-dc2626?style=for-the-badge&logo=github&logoColor=white)](https://github.com/Warpshlczy/CityUHK-Hub/issues/new?labels=bug&title=%5BBug%5D%20) | 已预填标题 `[Bug]` 与 `bug` 标签 |
+| 提功能建议 / 提问 | [![Request a feature](https://img.shields.io/badge/request%20a%20feature-issue-a855f7?style=for-the-badge&logo=github&logoColor=white)](https://github.com/Warpshlczy/CityUHK-Hub/issues/new?labels=enhancement&title=%5BFeature%5D%20) | 已预填标题 `[Feature]` 与 `enhancement` 标签 |
+| 看别人提了什么 | [浏览全部 Issue](https://github.com/Warpshlczy/CityUHK-Hub/issues) | 先搜一下，避免重复 |
 
 ### 分支模型
 
@@ -188,7 +188,7 @@ npm test             # 解析器与 /api 函数测试
 
 #### 方式一：提交你的项目（最主要）
 
-1. **Fork** 本仓库并 clone 到本地，从 `feature` 建一个分支，例如 `feat/add-my-project`。也可以直接点上面的[一键新建项目文件](https://github.com/Warpshlczy/CityU-Hub/new/feature?filename=repos/my-project.md)在网页上填。
+1. **Fork** 本仓库并 clone 到本地，从 `feature` 建一个分支，例如 `feat/add-my-project`。也可以直接点上面的[一键新建项目文件](https://github.com/Warpshlczy/CityUHK-Hub/new/feature?filename=repos/my-project.md)在网页上填。
 2. 复制 `repos/_template.md` 为 `repos/你的项目名.md`，填写 front matter 与正文。
 3. 必填字段：`title`、`author`（GitHub 用户名）、`authorName`（真实姓名）、`major`（专业）、`enrollmentYear`（入学年份，四位数字）、`repoUrl`（必须是公开的 `https://github.com/...` 地址）。可选：`id`、`summary`、`homepageUrl`、`tags`（最多 12 个小写短标签）、`category`、`featured`、`status`（`active` / `hidden` / `archived`）。**schema 不允许出现未定义的字段。**
 4. 正文写在 front matter 之后：开头写项目介绍，`## Features` 段落完全由作者自行决定——写了才展示，**留空或整段不写都不会出现 Features**，也不会用 GitHub 仓库简介去补齐。想让项目页直接展示仓库 README，把项目介绍留空即可。
@@ -347,10 +347,10 @@ npm test             # 解析器與 /api 函式測試
 
 | 想做的事 | 一鍵喚起 | 說明 |
 | --- | --- | --- |
-| 提交自己的項目 | [![Submit a project](https://img.shields.io/badge/submit%20a%20project-PR%20to%20feature-22c55e?style=for-the-badge&logo=github&logoColor=white)](https://github.com/Warpshlczy/CityU-Hub/new/feature?filename=repos/my-project.md) | 打開 GitHub 檔案編輯器，沒權限會自動 fork，檔案建在 `feature` 分支，提交即開 PR |
-| 報告 Bug | [![Report a bug](https://img.shields.io/badge/report%20a%20bug-issue-dc2626?style=for-the-badge&logo=github&logoColor=white)](https://github.com/Warpshlczy/CityU-Hub/issues/new?labels=bug&title=%5BBug%5D%20) | 已預填標題 `[Bug]` 與 `bug` 標籤 |
-| 提功能建議 / 提問 | [![Request a feature](https://img.shields.io/badge/request%20a%20feature-issue-a855f7?style=for-the-badge&logo=github&logoColor=white)](https://github.com/Warpshlczy/CityU-Hub/issues/new?labels=enhancement&title=%5BFeature%5D%20) | 已預填標題 `[Feature]` 與 `enhancement` 標籤 |
-| 看別人提了什麼 | [瀏覽全部 Issue](https://github.com/Warpshlczy/CityU-Hub/issues) | 先搜一下，避免重複 |
+| 提交自己的項目 | [![Submit a project](https://img.shields.io/badge/submit%20a%20project-PR%20to%20feature-22c55e?style=for-the-badge&logo=github&logoColor=white)](https://github.com/Warpshlczy/CityUHK-Hub/new/feature?filename=repos/my-project.md) | 打開 GitHub 檔案編輯器，沒權限會自動 fork，檔案建在 `feature` 分支，提交即開 PR |
+| 報告 Bug | [![Report a bug](https://img.shields.io/badge/report%20a%20bug-issue-dc2626?style=for-the-badge&logo=github&logoColor=white)](https://github.com/Warpshlczy/CityUHK-Hub/issues/new?labels=bug&title=%5BBug%5D%20) | 已預填標題 `[Bug]` 與 `bug` 標籤 |
+| 提功能建議 / 提問 | [![Request a feature](https://img.shields.io/badge/request%20a%20feature-issue-a855f7?style=for-the-badge&logo=github&logoColor=white)](https://github.com/Warpshlczy/CityUHK-Hub/issues/new?labels=enhancement&title=%5BFeature%5D%20) | 已預填標題 `[Feature]` 與 `enhancement` 標籤 |
+| 看別人提了什麼 | [瀏覽全部 Issue](https://github.com/Warpshlczy/CityUHK-Hub/issues) | 先搜一下，避免重複 |
 
 ### 分支模型
 
@@ -380,7 +380,7 @@ npm test             # 解析器與 /api 函式測試
 
 #### 方式一：提交你的項目（最主要）
 
-1. **Fork** 本儲存庫並 clone 到本機，從 `feature` 開一個分支，例如 `feat/add-my-project`。也可以直接點上面的[一鍵新建項目檔案](https://github.com/Warpshlczy/CityU-Hub/new/feature?filename=repos/my-project.md)在網頁上填。
+1. **Fork** 本儲存庫並 clone 到本機，從 `feature` 開一個分支，例如 `feat/add-my-project`。也可以直接點上面的[一鍵新建項目檔案](https://github.com/Warpshlczy/CityUHK-Hub/new/feature?filename=repos/my-project.md)在網頁上填。
 2. 複製 `repos/_template.md` 為 `repos/你的項目名.md`，填寫 front matter 與正文。
 3. 必填欄位：`title`、`author`（GitHub 使用者名稱）、`authorName`（真實姓名）、`major`（主修）、`enrollmentYear`（入學年份，四位數字）、`repoUrl`（必須是公開的 `https://github.com/...` 位址）。可選：`id`、`summary`、`homepageUrl`、`tags`（最多 12 個小寫短標籤）、`category`、`featured`、`status`（`active` / `hidden` / `archived`）。**schema 不允許出現未定義的欄位。**
 4. 正文寫在 front matter 之後：`summary` 用來當卡片摘要，開頭寫項目介紹，`## Features` 段落完全由作者自行決定——寫了才展示，**留空或整段不寫都不會出現 Features**，也不會用 GitHub 儲存庫簡介去補齊；把項目介紹留空則回退到展示儲存庫 README。
@@ -539,10 +539,10 @@ Skip the docs and click straight through — the badges in the table already car
 
 | What you want | One-click action | Notes |
 | --- | --- | --- |
-| Submit your project | [![Submit a project](https://img.shields.io/badge/submit%20a%20project-PR%20to%20feature-22c55e?style=for-the-badge&logo=github&logoColor=white)](https://github.com/Warpshlczy/CityU-Hub/new/feature?filename=repos/my-project.md) | Opens the GitHub file editor; without write access it forks for you, creates the file on `feature`, and committing opens the PR |
-| Report a bug | [![Report a bug](https://img.shields.io/badge/report%20a%20bug-issue-dc2626?style=for-the-badge&logo=github&logoColor=white)](https://github.com/Warpshlczy/CityU-Hub/issues/new?labels=bug&title=%5BBug%5D%20) | Title `[Bug]` and the `bug` label are pre-filled |
-| Request a feature / ask a question | [![Request a feature](https://img.shields.io/badge/request%20a%20feature-issue-a855f7?style=for-the-badge&logo=github&logoColor=white)](https://github.com/Warpshlczy/CityU-Hub/issues/new?labels=enhancement&title=%5BFeature%5D%20) | Title `[Feature]` and the `enhancement` label are pre-filled |
-| See what's already reported | [Browse all issues](https://github.com/Warpshlczy/CityU-Hub/issues) | Search first to avoid duplicates |
+| Submit your project | [![Submit a project](https://img.shields.io/badge/submit%20a%20project-PR%20to%20feature-22c55e?style=for-the-badge&logo=github&logoColor=white)](https://github.com/Warpshlczy/CityUHK-Hub/new/feature?filename=repos/my-project.md) | Opens the GitHub file editor; without write access it forks for you, creates the file on `feature`, and committing opens the PR |
+| Report a bug | [![Report a bug](https://img.shields.io/badge/report%20a%20bug-issue-dc2626?style=for-the-badge&logo=github&logoColor=white)](https://github.com/Warpshlczy/CityUHK-Hub/issues/new?labels=bug&title=%5BBug%5D%20) | Title `[Bug]` and the `bug` label are pre-filled |
+| Request a feature / ask a question | [![Request a feature](https://img.shields.io/badge/request%20a%20feature-issue-a855f7?style=for-the-badge&logo=github&logoColor=white)](https://github.com/Warpshlczy/CityUHK-Hub/issues/new?labels=enhancement&title=%5BFeature%5D%20) | Title `[Feature]` and the `enhancement` label are pre-filled |
+| See what's already reported | [Browse all issues](https://github.com/Warpshlczy/CityUHK-Hub/issues) | Search first to avoid duplicates |
 
 ### Branch model
 
@@ -572,7 +572,7 @@ site change PR ────────► dev ─────┘
 
 #### Option 1: Submit your project (the main path)
 
-1. **Fork** this repository, clone it, and branch off `feature`, e.g. `feat/add-my-project`. You can also use the [one-click new project file](https://github.com/Warpshlczy/CityU-Hub/new/feature?filename=repos/my-project.md) link and fill it in right in the browser.
+1. **Fork** this repository, clone it, and branch off `feature`, e.g. `feat/add-my-project`. You can also use the [one-click new project file](https://github.com/Warpshlczy/CityUHK-Hub/new/feature?filename=repos/my-project.md) link and fill it in right in the browser.
 2. Copy `repos/_template.md` to `repos/your-project.md` and fill in the front matter and the body.
 3. Required fields: `title`, `author` (GitHub username), `authorName`, `major`, `enrollmentYear` (four digits), `repoUrl` (must be a public `https://github.com/...` URL). Optional: `id`, `summary`, `homepageUrl`, `tags` (max 12 short lowercase tags), `category`, `featured`, `status` (`active` / `hidden` / `archived`). **The schema rejects any undefined field.**
 4. Put your description after the front matter: `summary` becomes the card text. The `## Features` section is entirely up to you — write it and it renders, **leave it empty or omit it and no Features block appears**, and the repository description is never used as a substitute. Leave the intro empty to fall back to your repository README.

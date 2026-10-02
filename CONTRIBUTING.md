@@ -4,9 +4,9 @@
 
 ## 一键入口
 
-- 提交项目：[新建 `repos/我的项目.md`](https://github.com/Warpshlczy/CityU-Hub/new/feature?filename=repos/my-project.md)（文件建在 `feature` 分支上，提交即开 PR）
-- 报告 Bug：[开 Bug Issue](https://github.com/Warpshlczy/CityU-Hub/issues/new?labels=bug&title=%5BBug%5D%20)（预填 `[Bug]` 标题与 `bug` 标签）
-- 功能建议 / 提问：[开建议 Issue](https://github.com/Warpshlczy/CityU-Hub/issues/new?labels=enhancement&title=%5BFeature%5D%20)（预填 `[Feature]` 标题与 `enhancement` 标签）
+- 提交项目：[新建 `repos/我的项目.md`](https://github.com/Warpshlczy/CityUHK-Hub/new/feature?filename=repos/my-project.md)（文件建在 `feature` 分支上，提交即开 PR）
+- 报告 Bug：[开 Bug Issue](https://github.com/Warpshlczy/CityUHK-Hub/issues/new?labels=bug&title=%5BBug%5D%20)（预填 `[Bug]` 标题与 `bug` 标签）
+- 功能建议 / 提问：[开建议 Issue](https://github.com/Warpshlczy/CityUHK-Hub/issues/new?labels=enhancement&title=%5BFeature%5D%20)（预填 `[Feature]` 标题与 `enhancement` 标签）
 
 ## 分支模型
 

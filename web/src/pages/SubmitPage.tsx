@@ -370,7 +370,7 @@ function SubmitForm({ confirmedUser, onRestart }: { confirmedUser: string; onRes
         <div className="border-[3px] border-line bg-surface p-4">
           <h3 className="pixel text-[10px] text-ink">② Compare（对比分支）</h3>
           <p className="mono mt-1.5 text-[11px] text-muted">
-            回到你的 fork 首页，GitHub 会在顶部提示「This branch is N commits ahead of CityU-Hub:feature」，点
+            回到你的 fork 首页，GitHub 会在顶部提示「This branch is N commits ahead of CityUHK-Hub:feature」，点
             <span className="text-ink"> Compare &amp; pull request</span>；或直接点下面的对比入口，保持 base =
             本站 <span className="text-brand">feature</span>、compare = 你的 fork
             <span className="text-accent"> {SUBMIT_BRANCH}</span>。

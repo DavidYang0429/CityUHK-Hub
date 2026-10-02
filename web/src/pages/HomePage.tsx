@@ -359,7 +359,7 @@ export function HomePage() {
             className="chip-brutal flex items-center gap-2 px-2.5 py-1"
           >
             <GitHubIcon className="size-3.5" />
-            <span className="mono text-[11px]">Warpshlczy/CityU-Hub</span>
+            <span className="mono text-[11px]">Warpshlczy/CityUHK-Hub</span>
             <span className="pixel text-[8px] text-brand">★ STAR</span>
           </a>
           <span className="mono text-[11px] text-muted">{data?.total ?? 0} PROJECTS</span>
